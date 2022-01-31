@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/index.css">
 </head>
-<body class="preload">
+<body>
     <header class="content-container header">
         <a class="logo" href="./index.html"><img class="logo" src="./images/main/logo.png" alt="Logo"\></a>
         <a class="initials" href="./index.html"><img class="initials" src="./images/main/initials_break-it-down_shadow.png" alt="K.I.G."/></a>
@@ -35,54 +35,60 @@
             </section>
         </section>
         <script>
-            var menuIcon = document.getElementsByClassName('menu-icon')[0]
-            setTimeout(function(){ menuIcon.style.opacity = '1'; }, 350)
+            let menuIcon = document.getElementsByClassName('menu-icon')[0]
+            setTimeout(function(){ menuIcon.style.visibility = 'visible'; }, 850)
         </script>
     </header>
-    <section class="content-container main-info-section">
-        <section class="portrait-section">
-            <img class="portrait" src="./images/index/portrait.jpg" alt="Portrait"\>
+    <section class="body">
+        <img class="profession" src="./images/index/programmer_packing-funny.png" alt="Profession - Programmer"/>
+        <section class="content-container main-info-section">
+            <section class="info-card" data-tilt data-tilt-max="10" data-tilt-speed="150">
+                <section class="portrait-section">
+                    <img class="portrait" src="./images/index/portrait.jpg" alt="Portrait"\>
+                </section>
+                <section class="info-section">
+                    <ul class="data">
+                        <li class="datum">
+                            <label>First Name:</label>
+                            <img class="initial" src="./images/index/K_break-it-down_shadow.png" alt="K"\>
+                            <span class="text-data name">ristiyan</span>
+                        </li>
+                        <li class="datum">
+                            <label>Middle Name:</label>
+                            <img class="initial" src="./images/index/I_break-it-down_shadow.png" alt="I"\>
+                            <span class="text-data name">vanov</span>
+                        </li>
+                        <li class="datum">
+                            <label>Last Name:</label>
+                            <img class="initial" src="./images/index/G_break-it-down_shadow.png" alt="G"\>
+                            <span class="text-data name">archev</span>
+                        </li>
+                        <li class="datum">
+                            <label>Age:</label>
+                            <span class="text-data age-data">archev</span>
+                        </li>
+                        <li class="datum last">
+                            <label>Date of Birth:</label>
+                            <span class="text-data">25.03.2003</span>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+            <script>
+                var years = new Date(new Date() - new Date(2003, 10, 25)).getFullYear() - 1970
+                document.getElementsByClassName('age-data')[0].innerHTML = years
+            </script>
+            <script type="text/javascript" src="./js/effects/vanilla-tilt.js"></script>
         </section>
-        <section class="info-section">
-            <ul class="data">
-                <li class="datum">
-                    <label>First Name:</label>
-                    <img class="initial" src="./images/index/K_break-it-down_shadow.png" alt="K"\>
-                    <span class="text-data">ristiyan</span>
-                </li>
-                <li class="datum">
-                    <label>Middle Name:</label>
-                    <img class="initial" src="./images/index/I_break-it-down_shadow.png" alt="I"\>
-                    <span class="text-data">vanov</span>
-                </li>
-                <li class="datum">
-                    <label>Last Name:</label>
-                    <img class="initial" src="./images/index/G_break-it-down_shadow.png" alt="G"\>
-                    <span class="text-data">archev</span>
-                </li>
-                <li class="datum">
-                    <label>Age:</label>
-                    <span class="text-data age-data">archev</span>
-                </li>
-                <li class="datum last">
-                    <label>Date of Birth:</label>
-                    <span class="text-data">25.03.2003</span>
-                </li>
-            </ul>
-        </section>
-        <script>
-            var years = new Date(new Date() - new Date(2003, 10, 25)).getFullYear() - 1970
-            document.getElementsByClassName('age-data')[0].innerHTML = years
-        </script>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam exercitationem eligendi necessitatibus quibusdam quos, iste hic illum soluta, cumque fugiat, dignissimos id quo! Officia provident suscipit temporibus rem reiciendis hic!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam exercitationem eligendi necessitatibus quibusdam quos, iste hic illum soluta, cumque fugiat, dignissimos id quo! Officia provident suscipit temporibus rem reiciendis hic!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam exercitationem eligendi necessitatibus quibusdam quos, iste hic illum soluta, cumque fugiat, dignissimos id quo! Officia provident suscipit temporibus rem reiciendis hic!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam exercitationem eligendi necessitatibus quibusdam quos, iste hic illum soluta, cumque fugiat, dignissimos id quo! Officia provident suscipit temporibus rem reiciendis hic!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam exercitationem eligendi necessitatibus quibusdam quos, iste hic illum soluta, cumque fugiat, dignissimos id quo! Officia provident suscipit temporibus rem reiciendis hic!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam exercitationem eligendi necessitatibus quibusdam quos, iste hic illum soluta, cumque fugiat, dignissimos id quo! Officia provident suscipit temporibus rem reiciendis hic!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam exercitationem eligendi necessitatibus quibusdam quos, iste hic illum soluta, cumque fugiat, dignissimos id quo! Officia provident suscipit temporibus rem reiciendis hic!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam exercitationem eligendi necessitatibus quibusdam quos, iste hic illum soluta, cumque fugiat, dignissimos id quo! Officia provident suscipit temporibus rem reiciendis hic!</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam exercitationem eligendi necessitatibus quibusdam quos, iste hic illum soluta, cumque fugiat, dignissimos id quo! Officia provident suscipit temporibus rem reiciendis hic!</p>
     </section>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam exercitationem eligendi necessitatibus quibusdam quos, iste hic illum soluta, cumque fugiat, dignissimos id quo! Officia provident suscipit temporibus rem reiciendis hic!</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam exercitationem eligendi necessitatibus quibusdam quos, iste hic illum soluta, cumque fugiat, dignissimos id quo! Officia provident suscipit temporibus rem reiciendis hic!</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam exercitationem eligendi necessitatibus quibusdam quos, iste hic illum soluta, cumque fugiat, dignissimos id quo! Officia provident suscipit temporibus rem reiciendis hic!</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam exercitationem eligendi necessitatibus quibusdam quos, iste hic illum soluta, cumque fugiat, dignissimos id quo! Officia provident suscipit temporibus rem reiciendis hic!</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam exercitationem eligendi necessitatibus quibusdam quos, iste hic illum soluta, cumque fugiat, dignissimos id quo! Officia provident suscipit temporibus rem reiciendis hic!</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam exercitationem eligendi necessitatibus quibusdam quos, iste hic illum soluta, cumque fugiat, dignissimos id quo! Officia provident suscipit temporibus rem reiciendis hic!</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam exercitationem eligendi necessitatibus quibusdam quos, iste hic illum soluta, cumque fugiat, dignissimos id quo! Officia provident suscipit temporibus rem reiciendis hic!</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam exercitationem eligendi necessitatibus quibusdam quos, iste hic illum soluta, cumque fugiat, dignissimos id quo! Officia provident suscipit temporibus rem reiciendis hic!</p>
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam exercitationem eligendi necessitatibus quibusdam quos, iste hic illum soluta, cumque fugiat, dignissimos id quo! Officia provident suscipit temporibus rem reiciendis hic!</p>
 </body>
 </html>
