@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+.options{
+    width: 60%;
+    max-height: calc(7 * var(--font-size));
+    margin-bottom: var(--font-size);
+    margin-left: auto;
+    position: relative;
+    padding: calc(2 * var(--font-size)) calc(2 * var(--font-size)) var(--font-size);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1em;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    gap: calc(.4 * var(--font-size));
+}
+
+.options::before,
+.options::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius:  12% / 18%;
+    background-color: rgba(240, 255, 255, 0.829);
+    z-index: 1;
+    transform: rotate(1deg);
+}
+
+.options::before{
+    background-color: rgba(240, 255, 255, 0.63);
+    transform: rotate(-2deg);
+}
+
+.options > *{
+    position: relative;
+    z-index: 2;
+}
+
+.options .message{
+    position: absolute;
+    top: 1.3em;
+    left: 2.5em;
+    font-size: 1.5em;
+    text-shadow: .03em .03em .1em rgba(37, 37, 37, 0.082);
+    color: rgb(53, 53, 53);
+}
+
+/*       Custom Checkbox       */
+.options .option{
+    min-width: 30%;
+    user-select: none;
+}
+
+.options .option label{
+    cursor: pointer;
+}
+
+.options .option label input[type="checkbox"]{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.options .option label span{
+    position: relative;
+    display: inline-block;
+    padding: .5em 1em;
+    background-color: #7a7373;
+    color: rgb(184, 184, 184);
+    text-shadow: 0 .025em .1em rgba(0, 0, 0, 0.5);
+    border-radius: 1em;
+    box-shadow: .05em .05em .2em rgba(3, 3, 3, 0.171);
+    transition: 0.5s;
+    overflow: hidden;
+    --shadow-color: rgba(41, 41, 41, 0.466);
+}
+
+.options .option label span::before{
+    content: '';
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(240, 255, 255, .1);
+}
+
+.options .option label input[type="checkbox"]:checked + span{
+    color: white;
+    text-shadow: 1px 1px 0 var(--shadow-color),
+                -1px 1px 0 var(--shadow-color),
+                1px -1px 0 var(--shadow-color),
+                -1px -1px 0 var(--shadow-color);
+}
+
+.options .option:nth-child(4n) label input[type="checkbox"]:checked + span{
+    background-color: rgb(59, 236, 35);
+    box-shadow: .1em .1em .3em rgba(94, 235, 28, 0.678);
+}
+.options .option:nth-child(4n + 1) label input[type="checkbox"]:checked + span{
+    background-color: rgb(0, 183, 255);
+    box-shadow: .1em .1em .3em rgba(1, 183, 255, 0.678);
+}
+.options .option:nth-child(4n + 2) label input[type="checkbox"]:checked + span{
+    background-color: rgb(255, 51, 51);
+    box-shadow: .1em .1em .3em rgba(255, 51, 51, 0.678);
+}
+.options .option:nth-child(4n + 3) label input[type="checkbox"]:checked + span{
+    background-color: rgb(221, 51, 255);
+    box-shadow: .1em .1em .3em rgba(190, 51, 255, 0.678);
+}
+
+/*       Timeline System       */
+.timeline{
+    width: 100%;
+    --offset: calc(2 * var(--font-size));
+    --thickness: calc(.8 * var(--font-size));
+    padding: var(--offset);
+    position: relative;
+}
+
+.timeline .line{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--offset);
+    width: var(--thickness);
+    border-radius: calc(0.5 * var(--thickness));
+    background-color: var(--highlight-color-lighter);
+    box-shadow: inset .1em .2em .5em  0 rgba(255, 255, 255, 0.39),
+                .5em .5em 1em  0 rgba(0, 0, 0, 0.11),
+                0 0 0 calc(.5 * var(--thickness)) var(--highlight-color),
+                .5em .5em 1em  calc(.5 * var(--thickness)) rgba(0, 0, 0, 0.068);
+}
+
+.timeline .line .shadow-wrapper{
+    filter: drop-shadow(.5em .5em .5em rgba(0, 0, 0, 0.158));
+
+}
+
+.timeline .line .shadow-wrapper .arrow1,
+.timeline .line .shadow-wrapper .arrow2{
+    position: absolute;
+    top: -5em;
+    --dx: -3em;
+    left: var(--dx);
+    right: var(--dx);
+    --width: calc(var(--thickness) - 2 * var(--dx));
+    aspect-ratio: 7 / 8;
+    clip-path: polygon(71% 88%, 50% 75%, 29% 88%, 0 100%, 29% 50.5%, 50% 0, 71% 50.5%, 100% 100%);
+    background: linear-gradient(115deg, white 20%, var(--highlight-color-lighter) 40%);
+}
+
+.timeline .line .shadow-wrapper .arrow1{
+    background: linear-gradient(115deg, white 20%, var(--highlight-color) 38%);
+    transform: scale(1.5);
+}
+
+.achievement{
+    width: 100%;
+    margin-top: 2em;
+    position: relative;
+}
+
+.achievement:last-child{
+    margin-bottom: 2em;
+}
+
+.achievement .timepoint{
+    position: absolute;
+    --width: calc(1.5 * 1.5 * var(--thickness));
+    left: calc(0.5 * var(--thickness) - 0.5 * var(--width));
+    width: var(--width);
+    aspect-ratio: 1 / 1;
+    top: calc(50% - 0.5 * var(--width));
+}
+
+.achievement .timepoint::before{
+    content: '';
+    position: absolute;
+    top: calc(-0.75 * var(--thickness));
+    right: calc(-0.75 * var(--thickness));
+    bottom: calc(-0.75 * var(--thickness));
+    left: calc(-0.75 * var(--thickness));
+    background-color: var(--highlight-color);
+    z-index: 4;
+    border-radius: 50%;
+}
+
+.achievement .timepoint::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--highlight-color-lighter);
+    z-index: 6;
+    border-radius: 50%;
+}
+
+.achievement .timepoint::before,
+.achievement .timepoint::after{
+    box-shadow: .2em .2em .3em rgba(0, 0, 0, 0.068),
+                0 .5em .3em rgba(0, 0, 0, 0.048),
+                inset .2em .2em .2em rgba(255, 255, 255, 0.116);
+    transition: all .3s ease-in;
+}
+
+.achievement .timepoint:hover::before,
+.achievement .timepoint:hover::after{
+    transform: scale(1.1);
+}
+
+.achievement .date{
+    position: absolute;
+    --height: calc(.5 * var(--font-size));
+    left: calc(3 * var(--font-size));
+    top: calc(50% - 0.5 * var(--height));
+    bottom: calc(50% - 0.5 * var(--height));
+    font-size: var(--height);
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    text-shadow: .1em .1em .1em rgba(0, 0, 0, 0.116);
+    z-index: 2;
+}
+
+.achievement .date::before{
+    content: '';
+    position: absolute;
+    --width: 150%;
+    width: var(--width);
+    top: 0;
+    bottom: -0.5em;
+    left: calc(50% - 0.5 * var(--width) - 0.04em);
+    right: calc(50% - 0.5 *var(--width));
+    background-color: rgba(240, 255, 255, 0.116);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(156, 202, 202, 0.466);
+    border-radius: 1em;
+    z-index: -2;
+}
+
+.achievement .event-info{
+    width: 60%;
+    margin-left: auto;
+    background-color: rgba(172, 255, 47, 0.473);
+    max-height: 10em;
+    overflow: hidden;
+}
+
+.achievement .event-info .diplomas{
+    visibility: hidden;
+}
