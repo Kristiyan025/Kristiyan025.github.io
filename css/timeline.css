@@ -108,12 +108,12 @@
     box-shadow: .1em .1em .3em rgba(94, 235, 28, 0.678);
 }
 .options .option:nth-child(4n + 1) label input[type="checkbox"]:checked + span{
-    background-color: rgb(0, 183, 255);
-    box-shadow: .1em .1em .3em rgba(1, 183, 255, 0.678);
-}
-.options .option:nth-child(4n + 2) label input[type="checkbox"]:checked + span{
     background-color: rgb(255, 51, 51);
     box-shadow: .1em .1em .3em rgba(255, 51, 51, 0.678);
+}
+.options .option:nth-child(4n + 2) label input[type="checkbox"]:checked + span{
+    background-color: rgb(0, 183, 255);
+    box-shadow: .1em .1em .3em rgba(1, 183, 255, 0.678);
 }
 .options .option:nth-child(4n + 3) label input[type="checkbox"]:checked + span{
     background-color: rgb(221, 51, 255);
@@ -151,8 +151,8 @@
 .timeline .line .shadow-wrapper .arrow1,
 .timeline .line .shadow-wrapper .arrow2{
     position: absolute;
-    top: -5em;
-    --dx: -3em;
+    top: calc(-2 * var(--font-size));
+    --dx: calc(-1.2 * var(--font-size));
     left: var(--dx);
     right: var(--dx);
     --width: calc(var(--thickness) - 2 * var(--dx));
