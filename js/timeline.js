@@ -1,0 +1,121 @@
+const parent = document.getElementsByClassName('achievements')[0];
+const checkboxes = Array.from(document.querySelectorAll('input[type="checkbox"]'));
+const checkboxesParent = document.getElementsByClassName('options')[0];
+const subjectIcons = {
+    'math': '<i class="fas fa-square-root-alt"></i>',
+    'programming': '<i class="fas fa-code"></i>',
+    'school': '<i class="fas fa-graduation-cap"></i>',
+    'robotics': '<i class="fas fa-robot"></i>',
+    'music': '<i class="fas fa-music"></i>',
+    'english': '<i class="language-icon">a</i>',
+    'german': '<i class="language-icon">ä</i>',
+    'technical-sketching': '<i class="fas fa-pencil-alt"></i>',
+    'math-linguistics': '<i class="fas fa-language"></i>',
+    'miscellaneous': '<i class="fas fa-cubes"></i>'
+};
+
+const isPortrait = (img) => img.clientWidth < img.clientHeight;
+
+const lowBound = 4;
+const upBound = 7;
+const range = upBound - lowBound;
+const sigmoid = x => 1 / (1 + (1.5 ** -(x - 8)));
+const scaledDayDifference = (x, y) => (x.getTime() - y.getTime()) / (1000 * 60 * 60 * 24) / 20;
+
+const fixMargins = () => {
+    let i = 0;
+    let prevDate = new Date();
+    console.log(parent)
+    for(const achievement of Array.from(parent.children)) {
+        const dateParts = achievement.children[1].innerText.split('/');
+        const curDate = new Date(dateParts[2], dateParts[1], dateParts[0])
+        console.log(achievement.children)
+        console.log(dateParts)
+        console.log(curDate)
+        if(i > 0) {
+            achievement.style.marginTop = 
+                `calc(${sigmoid(scaledDayDifference(prevDate, curDate)) * range + lowBound} * var(--font-size))`;
+            console.log(`${scaledDayDifference(prevDate, curDate)} - ${sigmoid(scaledDayDifference(prevDate, curDate))} - ${sigmoid(scaledDayDifference(prevDate, curDate)) * range + lowBound}`)
+        }
+        prevDate = curDate;
+        i++;
+    }
+};
+
+const buildTimeline = (page, pagename) => {
+    let chosen = checkboxes
+        .filter(x => x.checked)
+        .map(x => x.name);
+    let arr = [];
+    for (const folder in page) {
+        let files = page[folder];
+        if(chosen.includes(folder))
+            for(const file of files)
+                arr.push(file + '|' + folder);
+    }
+    arr.sort((a, b) => (a > b ? -1 : 1));
+    let prevPt = '';
+    let timepoints = [];
+    let cur = [];
+    for(let i = 0; i < arr.length; i++) {
+        let parts = arr[i].split('|');
+        let file = parts[0];
+        let folder = parts[1];
+        parts = parts[0].split('_');
+        let date = parts[0].split('-').reverse().join('/');
+        let eventname = parts[1];
+        if(eventname.includes('-PART-'))
+        {
+            parts = eventname.split('-PART-');
+            eventname = parts[0];
+        }
+        eventname = eventname.replaceAll('.jpg', '').replaceAll(' Sharp', '#');
+        if(date + '_' + eventname != prevPt && prevPt != '') {
+            timepoints.push(cur);
+            cur = [];
+        }
+        cur.push({date, eventname, folder, file});
+        prevPt = date + '_' + eventname;
+    }
+    if(cur.length > 0) timepoints.push(cur);
+    parent.innerHTML = '';
+    for(let pt of timepoints) {
+        pt.sort((a, b) => (a.file > b.file ? 1 : -1));
+        parent.innerHTML += `                    
+        <section class="achievement">
+            <section class="timepoint">${subjectIcons[pt[0].folder]}</section>
+            <section class="date">${pt[0].date}</section>
+            <section class="event-info reveal">
+                <h3 class="name">${pt[0].eventname}</h3>
+                <section class="diplomas scrollable">
+                    ${pt.map(diploma => `
+                    <section class="diploma">
+                        <img class="diploma-photo expanded" 
+                            src="./images/${pagename}/${diploma.folder}/${diploma.file}" alt="${diploma.eventname}" loading="lazy">
+                    </section>                    
+                    `).join('\n')}
+                </section>
+            </section>
+        </section>`;
+    }
+    fixMargins();
+}
+
+const centerImages = () => {
+    setTimeout(() => {
+        Array.from(document.getElementsByClassName('diplomas')).forEach(diplomas => {
+            if(diplomas.children.length == 1 || 
+            (diplomas.children.length == 2 && diplomas.children[0].clientWidth + diplomas.children[1].clientWidth < diplomas.clientWidth))
+            diplomas.classList.add('centered')
+        });
+    }, 1000);
+};
+
+const addEventListenersToCheckboxes = (page, pagename) => {
+    checkboxesParent.addEventListener('click', e => {
+        if(e.target.localName === 'input'){
+            buildTimeline(page, pagename);
+            centerImages();
+        }
+    });
+}

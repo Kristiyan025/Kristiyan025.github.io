@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Info</title>
+    <title>Achievements</title>
     <link rel="SHORTCUT ICON" href="./images/main/logo.ico" type="image/x-icon" />
     <link rel="ICON" href="./images/main/logo.ico" type="image/ico" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
@@ -41,6 +41,7 @@
     </header>
     <section class="body">
         <section class="content-container">
+            <img class="title" src="./images/main/achievements.png" alt="Achievements">
             <section class="options">
                 <h3 class="message">Choose categories:</h3>
                 <section class="option">
@@ -86,8 +87,8 @@
                     </label>                    
                 </section>
                 <section class="option">
-                    <label for="math-linguistic">
-                        <input type="checkbox" name="math-linguistic" data-bg="blue" unchecked>
+                    <label for="math-linguistics">
+                        <input type="checkbox" name="math-linguistics" data-bg="blue" unchecked>
                         <span><i class="fas fa-language"></i> Math Linguistics</span>
                     </label>                    
                 </section>
@@ -103,21 +104,22 @@
                     <section class="shadow-wrapper"><section class="arrow1"></section></section>
                     <section class="shadow-wrapper"><section class="arrow2"></section></section>
                 </section>
-                <section class="achievement">
-                    <section class="timepoint"></section>
-                    <section class="date">24/34/2015</section>
-                    <section class="event-info">
-                        <h3 class="name"> Hour Code</h3>
-                        <section class="diplomas">
-                            <section class="diploma">
-                                <img class="diploma-photo" src="./images/education/Programming/2016-09-23_The-Hour-of-Code.jpg">
-                            </section>
-                        </section>
-                    </section>
-                </section>
+                <section class="achievements"></section>
             </section>
+            <script src="./js/db.js"></script>
+            <script src="./js/timeline.js"></script>
+            <script>
+                buildTimeline(achievements, 'achievements');             
+                addEventListenersToCheckboxes(achievements, 'achievements');
+                centerImages();
+            </script>
         </section>
     </section>
+    <section class="big-img hidden">
+        <div class="close"></div>
+        <img class="big-pic" src="" alt ="">
+    </section>
+    <script src="./js/picture-mechanism.js"></script>
     <footer class="content-container footer">
         <ul class="footer-content">
             <li class="column">

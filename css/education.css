@@ -1,0 +1,7 @@
+.options{
+    height: calc(6 * var(--font-size));
+}
+
+.options .option{
+    min-width: 50%;
+}

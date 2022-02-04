@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Info</title>
+    <title>Education</title>
     <link rel="SHORTCUT ICON" href="./images/main/logo.ico" type="image/x-icon" />
     <link rel="ICON" href="./images/main/logo.ico" type="image/ico" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/timeline.css">
+    <link rel="stylesheet" href="./css/achievements.css">
+    <link rel="stylesheet" href="./css/education.css">
     <script src="./js/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/26ff0a2b49.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header class="content-container header">
-        <a class="logo" href="./index.html"><img class="logo" src="./images/main/logo.png" alt="Logo"\></a>
+        <a class="logo" href="./index.html"><img class="logo" src="./images/main/logo.png" alt="Logo"></a>
         <a class="initials" href="./index.html"><img class="initials" src="./images/main/initials_break-it-down_shadow.png" alt="K.I.G."/></a>
         <section class="menu">
             <div class="menu-icon">
@@ -38,8 +41,56 @@
         </section>
     </header>
     <section class="body">
-        
+        <section class="content-container">
+            <img class="title" src="./images/main/education.png" alt="Education">
+            <section class="options">
+                <h3 class="message">Choose categories:</h3>
+                <section class="option">
+                    <label for="programming">
+                        <input type="checkbox" name="programming" checked>
+                        <span><i class="fas fa-code"></i> Programming</span>
+                    </label>                    
+                </section>
+                <section class="option">
+                    <label for="school">
+                        <input type="checkbox" name="school" unchecked>
+                        <span><i class="fas fa-graduation-cap"></i> School</span>
+                    </label>                    
+                </section>
+                <section class="option">
+                    <label for="english">
+                        <input type="checkbox" name="english" unchecked>
+                        <span><i class="language-icon">a</i> English</span>
+                    </label>                    
+                </section>
+                <section class="option">
+                    <label for="miscellaneous">
+                        <input type="checkbox" name="miscellaneous" data-bg="blue" unchecked>
+                        <span><i class="fas fa-cubes"></i> Miscellaneous</span>
+                    </label>                    
+                </section>
+            </section>
+            <section class="timeline">
+                <section class="line special">
+                    <section class="shadow-wrapper"><section class="arrow1"></section></section>
+                    <section class="shadow-wrapper"><section class="arrow2"></section></section>
+                </section>
+                <section class="achievements"></section>
+            </section>
+            <script src="./js/db.js"></script>
+            <script src="./js/timeline.js"></script>
+            <script>
+                buildTimeline(education, 'education');             
+                addEventListenersToCheckboxes(education, 'education');
+                centerImages();
+            </script>
+        </section>
     </section>
+    <section class="big-img hidden">
+        <div class="close"></div>
+        <img class="big-pic" src="" alt ="">
+    </section>
+    <script src="./js/picture-mechanism.js"></script>
     <footer class="content-container footer">
         <ul class="footer-content">
             <li class="column">

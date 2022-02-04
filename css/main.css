@@ -82,18 +82,18 @@ body{
     margin-right: 20px;
     border-radius: 50%;
     box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.123);
-    transition: all .1s ease-in;
+    transition: all .3s ease-out;
 }
 
 .logo:hover{
-    box-shadow: 0 0 5px 2px var(--highlight-color-complement-split1-alpha);
+    box-shadow: 0 0 5px 2px var(--highlight-color);
     transform: scale(1.05);
 }
 
 .initials{
     height: var(--children-height);
     width: auto;
-    transition: all .1s ease-in;
+    transition: all .3s ease-out;
 }
 
 .initials:hover{
@@ -106,7 +106,7 @@ body{
     --dash-thickness: calc(0.16 * var(--children-height));
     display: inline-block;
     --transition-duration: .4s;
-    transition: all var(--transition-duration) ease-in-out .15s;
+    transition: all var(--transition-duration) ease-out .15s;
 }
 
 .menu-icon{
@@ -269,12 +269,19 @@ body{
     transform: scale(1.1);
 }
 
+.content-container > .title{
+    height: calc(2 * var(--font-size));
+    width: auto;
+    margin: 0 auto calc(2 * var(--font-size));
+    display: block;
+}
+
 /*       Effect on Scroll       */
 .reveal{
     position: relative;
     transform: translateY(150px);
     opacity: 0;
-    transition: 2s all ease;
+    transition: .5s all ease;
 }
 
 .reveal.active{
@@ -291,20 +298,20 @@ body{
 /* Track */
 .scrollable::-webkit-scrollbar-track{
     background: rgb(214, 214, 214); 
-    box-shadow: inset -2px 0 3px rgba(0, 0, 0, 0.493);
+    box-shadow: inset -2px 0 3px rgba(0, 0, 0, 0.178);
     border-radius: 4px;
 }
 
 /* Handle */
 .scrollable::-webkit-scrollbar-thumb{
-    background: rgb(68, 68, 68); 
-    box-shadow: inset -4px 0 5px rgba(0, 0, 0, 0.493);
+    background: rgba(117, 46, 165, 0.829); 
+    box-shadow: inset -4px 0 5px rgba(95, 21, 145, 0.829);
     border-radius: 3px;
 }
 
 /* Handle on hover */
 .scrollable::-webkit-scrollbar-thumb:hover{
-    background: rgb(43, 43, 43); 
+    background: rgba(107, 27, 160, 0.829); 
 }
 
 /*       FOOTER       */
