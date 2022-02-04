@@ -2,7 +2,7 @@
 
 :root{
     --controls-color: rgb(48, 48, 48);
-    --padding: min(10%, max(35px, calc((100% - min(1024px, 100%)) * 0.5)));
+    --padding: max(10%, max(35px, calc((100% - min(64rem, 100%)) * 0.5)));
     --highlight-color: #f44f32;
     --highlight-color-lighter: #f4a632;
     --highlight-color-complement: #32d7f4;
