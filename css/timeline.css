@@ -414,3 +414,10 @@
 .cut{
     overflow-y: hidden;
 }
+
+.achievements .empty-category{
+    margin-left: calc(5.5 * var(--font-size));
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: .2em .1em .3em rgba(41, 41, 41, 0.253);
+}

@@ -5,3 +5,22 @@
 .options .option{
     min-width: 50%;
 }
+
+.schools{
+    margin-block: calc(6 * var(--font-size)) calc(3 * var(--font-size));
+    position: relative;
+}
+
+.event-info .name-link{
+    text-decoration: none;
+}
+
+.schools .schools-title{
+    position: absolute;
+    left: calc(9 * var(--font-size));
+    top: calc(-4 * var(--font-size));
+    font-family: 'Poppins', sans-serif;
+    font-size: calc(1.7 * var(--font-size));
+    color: aliceblue;
+    text-shadow: .2em .1em .3em rgba(41, 41, 41, 0.253);
+}

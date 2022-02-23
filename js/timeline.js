@@ -1,4 +1,4 @@
-const parent = document.getElementsByClassName('achievements')[0];
+const parent = document.querySelectorAll('.diplomas .timeline .achievements')[0];
 const checkboxes = Array.from(document.querySelectorAll('input[type="checkbox"]'));
 const checkboxesParent = document.getElementsByClassName('options')[0];
 const subjectIcons = {
@@ -25,19 +25,17 @@ const scaledDayDifference = (x, y) => (x.getTime() - y.getTime()) / (1000 * 60 *
 const fixMargins = () => {
     let i = 0;
     let prevDate = new Date();
-    console.log(parent)
+    if(parent.children.length > 0)
     for(const achievement of Array.from(parent.children)) {
-        const dateParts = achievement.children[1].innerText.split('/');
-        const curDate = new Date(dateParts[2], dateParts[1], dateParts[0])
-        console.log(achievement.children)
-        console.log(dateParts)
-        console.log(curDate)
-        if(i > 0) {
-            achievement.style.marginTop = 
-                `calc(${sigmoid(scaledDayDifference(prevDate, curDate)) * range + lowBound} * var(--font-size))`;
-            console.log(`${scaledDayDifference(prevDate, curDate)} - ${sigmoid(scaledDayDifference(prevDate, curDate))} - ${sigmoid(scaledDayDifference(prevDate, curDate)) * range + lowBound}`)
+        if(achievement.children.length > 1) {
+            const dateParts = achievement.children[1].innerText.split('/');
+            const curDate = new Date(dateParts[2], dateParts[1], dateParts[0])
+            if(i > 0) {
+                achievement.style.marginTop = 
+                    `calc(${sigmoid(scaledDayDifference(prevDate, curDate)) * range + lowBound} * var(--font-size))`;
+            }
+            prevDate = curDate;
         }
-        prevDate = curDate;
         i++;
     }
 };
@@ -79,6 +77,9 @@ const buildTimeline = (page, pagename) => {
     }
     if(cur.length > 0) timepoints.push(cur);
     parent.innerHTML = '';
+    if(timepoints.length === 0) {
+        parent.innerHTML = '<h2 class="empty-category">There are no records in this category, yet.</h2>';
+    }
     for(let pt of timepoints) {
         pt.sort((a, b) => (a.file > b.file ? 1 : -1));
         parent.innerHTML += `                    
