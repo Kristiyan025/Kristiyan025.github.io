@@ -5,8 +5,7 @@
     --gap: calc(.8 * var(--font-size));
     --width: calc((100% - (var(--count) - 1) * var(--gap)) / var(--count));
     grid-template-columns: repeat(3, var(--width));
-    --height: calc(.8 * var(--width));
-    grid-auto-rows: var(--height);
+    grid-template-rows: repeat(3, calc(8.5 * var(--font-size)));
     grid-gap: var(--gap);
 }
 
@@ -47,15 +46,16 @@
 }
 
 .projects-grid .project-cell .project-main{
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
 .projects-grid .project-cell .project-main .project-img{
     width: 100%;
+    /*margin-top: calc(2 * var(--font-size));*/
     user-select: none;
     border-radius: calc(.2 * var(--font-size));
     box-shadow: 
@@ -72,7 +72,7 @@
 
 .projects-grid .project-cell .project-main .project-title{
     width: 100%;
-    height: 100%;
+    margin: calc(.5 * var(--font-size));
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -98,7 +98,102 @@
 .projects-grid .project-cell .project-main .project-title .project-link:hover{
     transform: scale(1.1);
 }
+.projects-grid .project-cell .project-main .project-languages{
+    width: 100%;
+    padding: calc(.5 * var(--font-size)) 0;
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    row-gap: calc(.1 * var(--font-size));
+}
+
+.projects-grid .project-cell .project-main .project-languages .language{
+    font-family: 'Poppins', sans-serif;
+    display: inline-block;
+    margin-left: calc(.4 * var(--font-size));
+}
+.projects-grid .project-cell .project-main .project-languages .language:first-child{
+    margin-left: 0;
+}
+
+.projects-grid .project-cell .project-main .project-languages .language .dot{
+    height: .7em;
+    aspect-ratio: 1 / 1;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.dot.dark-blue { background-color: rgb(44, 44, 177) !important; }
+.dot.purple { background-color: rgb(106, 44, 177) !important; }
+.dot.yellow { background-color: rgb(218, 214, 35) !important; }
+.dot.red-orange { background-color: rgb(214, 61, 0) !important; }
+.dot.light-blue { background-color:rgb(39, 144, 230) !important; }
+.dot.orange { background-color:rgb(230, 141, 39) !important; }
+.dot.red { background-color:rgb(230, 39, 39) !important; }
 
 .projects-grid .project-cell .project-info{
     visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    --gap: calc(.4 * var(--font-size));
+    --width: 150%;
+    top: calc(100% + var(--gap));
+    width: var(--width);
+    left: calc(50% - .5 * var(--width));
+    height: 100%;
+    border-radius: calc(.4 * var(--font-size));
+    background-color: beige;
+    box-shadow: calc(.2 * var(--font-size)) calc(.2 * var(--font-size)) calc(.5 * var(--font-size)) rgba(0, 0, 0, 0.185),
+        inset calc(-0.2 * var(--font-size)) calc(-0.2 * var(--font-size)) calc(.5 * var(--font-size)) rgba(0, 0, 0, 0.075);
+    --upper: 60%;
+    transition: all .1s ease-out;
+    z-index: 20;
+}
+
+.projects-grid .project-cell .project-info::before
+{
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--gap));
+    --width: calc(2 * var(--gap));
+    bottom: 100%;
+    left: calc(50% - .5 * var(--width));
+    right: calc(50% - .5 * var(--width));
+    -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: inherit;
+}
+
+.projects-grid .project-cell:hover .project-info{
+    visibility: visible;
+    opacity: 1;
+}
+
+.projects-grid .project-cell .project-info .img{
+    width: 100%;
+    height: var(--upper);
+    object-fit: cover;
+    border-radius: inherit;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.projects-grid .project-cell .img{
+    background-color: rgba(0, 0, 0, 0.61);
+}
+
+.contain{
+    object-fit: contain !important;
+}
+
+.projects-grid .project-cell .project-info .info-text{
+    width: 80%;
+    height: calc(100% - var(--upper));
+    margin: calc(1 * var(--font-size)) auto;
+    font-family: 'Poppins', sans-serif;
+    text-indent: var(--font-size);
+    text-shadow: calc(.05 * var(--font-size)) calc(.05 * var(--font-size)) calc(.1 * var(--font-size)) rgba(0, 0, 0, 0.164);
 }
