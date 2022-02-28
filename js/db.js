@@ -156,7 +156,8 @@ let education = {
     `2020-11-31_SoftUni Course 'Algorithms Fundamentals (with C Sharp)'-PART-1.jpg`,
     `2020-11-31_SoftUni Course 'Algorithms Fundamentals (with C Sharp)'-PART-2.jpg`,
     `2019-02-28_SoftUni Course 'C Sharp OOP'-PART-1.jpg`,
-    `2019-02-28_SoftUni Course 'C Sharp OOP'-PART-2.jpg`
+    `2019-02-28_SoftUni Course 'C Sharp OOP'-PART-2.jpg`,
+    `2022-05-12_IT Kariera.jpg`
   ],
   'miscellaneous' : [
     `2012-03-29_Level 'A' within The ULEN Ski and Snowboard School.jpg`
