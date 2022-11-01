@@ -31,7 +31,8 @@ let achievements = {
     `2017-12-02_26-th Math Tournament 'Ivan Salabashev'.jpg`,
     `2016-12-03_25-th Math Tournament 'Ivan Salabashev'.jpg`,
     `2015-05-12_10-th Singapore Asian Schools Math Olympiad (SASMO).jpg`,
-    `2016-09-09_Math Tournament '30 Problems in 30 Languages'.jpg`
+    `2016-09-09_Math Tournament '30 Problems in 30 Languages'.jpg`,
+    `2022-10-29_9-th National Student Olympiad in Computer Mathematics.jpg`
   ],
   'music' : [
     `2016-04-01_7-th National Folklore Competition 'Pesenna Duga nad Kutev'-PART-1.jpg`,
@@ -174,7 +175,9 @@ let education = {
     `2017-06-15_Certificate for Finished Middle School-PART-2.jpg`,
     `2021-05-14_Diploma for High Achievements in National Contests.jpg`,
     `2018-05-15_Diploma for High AchievemeMathematician of 8-th Grade.jpg`,
-    `2017-05-17_Diploma for High Achievements in School.jpg`
+    `2017-05-17_Diploma for High Achievements in School.jpg`,
+    `2022-05-25_Highschool Diploma-PART-1.jpg`,
+    `2022-05-25_Highschool Diploma-PART-2.jpg`
   ],
   'english' : [
     `2021-10-29_TOEFL Certificate-PART-1.jpg`,
