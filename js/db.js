@@ -32,7 +32,8 @@ let achievements = {
     `2016-12-03_25-th Math Tournament 'Ivan Salabashev'.jpg`,
     `2015-05-12_10-th Singapore Asian Schools Math Olympiad (SASMO).jpg`,
     `2016-09-09_Math Tournament '30 Problems in 30 Languages'.jpg`,
-    `2022-10-29_9-th National Student Olympiad in Computer Mathematics.jpg`
+    `2022-10-29_9-th National Student Olympiad in Computer Mathematics.jpg`,
+    `2023-03-07_17-th South-Eastern European Mathematical Olympiad for University Students.jpg`,
   ],
   'music' : [
     `2016-04-01_7-th National Folklore Competition 'Pesenna Duga nad Kutev'-PART-1.jpg`,
@@ -158,7 +159,14 @@ let education = {
     `2020-11-31_SoftUni Course 'Algorithms Fundamentals (with C Sharp)'-PART-2.jpg`,
     `2019-02-28_SoftUni Course 'C Sharp OOP'-PART-1.jpg`,
     `2019-02-28_SoftUni Course 'C Sharp OOP'-PART-2.jpg`,
-    `2022-05-12_IT Kariera.jpg`
+    `2022-03-15_Online Course 'Introduction to Tensorflow for Artificial Intelligence, Machine and Deep Learning' from Coursera.jpg`,
+    `2022-03-22_Online Course 'Supervised Learning - Regression and Classification' from Coursera.jpg`,
+    `2022-03-26_Online Course 'Convolutional Neural Networks in Tensorflow' from Coursera.jpg`,
+    `2022-03-30_Online Course 'Advanced Learning Algorithms' from Coursera.jpg`,
+    `2022-04-03_Online Course 'Custom Models, Layers, and Loss Functions with Tensorflow' from Coursera.jpg`,
+    `2022-04-07_Online Course 'Custom and Distributed Training with Tensorflow' from Coursera.jpg`,
+    `2022-05-12_IT Kariera.jpg`,
+    `2022-06-17_Online Course 'Optimize Tensorflow Models for Deployment with TensorRT' from Coursera.jpg`,
   ],
   'miscellaneous' : [
     `2012-03-29_Level 'A' within The ULEN Ski and Snowboard School.jpg`
