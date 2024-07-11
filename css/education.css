@@ -19,6 +19,9 @@
     position: absolute;
     left: calc(9 * var(--font-size));
     top: calc(-4 * var(--font-size));
+}
+
+.schools-title{
     font-family: 'Poppins', sans-serif;
     font-size: calc(1.7 * var(--font-size));
     color: aliceblue;
