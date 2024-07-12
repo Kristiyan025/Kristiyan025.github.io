@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./css/recommendations.css">
     <script src="https://kit.fontawesome.com/26ff0a2b49.js" crossorigin="anonymous"></script>
     <script src="./js/main.js" defer></script>
+    <script src="./js/fix-pdf-zoom-on-resize.js"></script>
 </head>
 <body>
     <header class="content-container header">
@@ -153,48 +154,8 @@
             &copy; 2022 - <img class="signature" src="images/main/initials_break-it-down_shadow.png" alt="K.I.G.">
         </p>
     </footer>
-    <script type="text/javascript" defer>
-        function getSubstringBeforeLastHash(inputString) {
-            const lastIndex = inputString.lastIndexOf('#');
-
-            if (lastIndex !== -1) {
-                const substringBeforeLastHash = inputString.substring(0, lastIndex);
-                return substringBeforeLastHash;
-            } else {
-                return inputString;
-            }
-        }
-
-        function fixPDFZoomOnResize() {
-            let zoomLevel = (window.outerWidth - 8) / window.innerWidth;
-            let changes = [];
-            document.querySelectorAll("embed.pdf").forEach(el => {
-                const oldSrcVal = el.src;
-                let newSrcVal = getSubstringBeforeLastHash(el.src);
-                if (zoomLevel > 3.5) {
-                    newSrcVal += "#toolbar=0&navpanes=0&scrollbar=0&view=FitH";
-                } else {
-                    newSrcVal += "#toolbar=0&navpanes=0&scrollbar=0&view=FitB";
-                }
-                if (oldSrcVal != newSrcVal) {
-                    const newEmbed = document.createElement('embed');
-                    newEmbed.id = el.id;
-                    newEmbed.classList = el.classList;
-                    newEmbed.src = newSrcVal;
-                    newEmbed.type = 'application/pdf';
-                    changes.push([el, newEmbed]);
-                }
-            });
-
-            for (let [oldEl, newEl] of changes) {
-                let parent = oldEl.parentNode;
-                parent.removeChild(oldEl);
-                parent.appendChild(newEl);
-            }
-        }
-
-        fixPDFZoomOnResize();
-        window.addEventListener('resize', fixPDFZoomOnResize);
+    <script type="text/javascript">
+        fixPdfElementZoomOnResize("embed.pdf");
     </script>
 </body>
 </html>
