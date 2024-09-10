@@ -1,4 +1,4 @@
-const parent = document.querySelectorAll('.diplomas .timeline .achievements')[0];
+const parent = document.querySelectorAll('.intertwined-optional-timelines .timeline .achievements')[0];
 const checkboxes = Array.from(document.querySelectorAll('input[type="checkbox"]'));
 const checkboxesParent = document.getElementsByClassName('options')[0];
 const subjectIcons = {
@@ -16,13 +16,13 @@ const subjectIcons = {
 
 const isPortrait = (img) => img.clientWidth < img.clientHeight;
 
-const lowBound = 4;
-const upBound = 7;
-const range = upBound - lowBound;
-const sigmoid = x => 1 / (1 + (1.5 ** -(x - 8)));
-const scaledDayDifference = (x, y) => (x.getTime() - y.getTime()) / (1000 * 60 * 60 * 24) / 20;
-
 const fixMargins = () => {
+    const lowBound = 4;
+    const upBound = 7;
+    const range = upBound - lowBound;
+    const sigmoid = x => 1 / (1 + (1.5 ** -(x - 8)));
+    const scaledDayDifference = (x, y) => (x.getTime() - y.getTime()) / (1000 * 60 * 60 * 24) / 20;
+
     let i = 0;
     let prevDate = new Date();
     if(parent.children.length > 0)

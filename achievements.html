@@ -41,79 +41,81 @@
         </section>
     </header>
     <section class="body">
-        <section class="content-container diplomas">
+        <section class="content-container">
             <img class="title unselectable" src="./images/main/achievements.png" alt="Achievements"  unselectable="on">
-            <section class="options">
-                <h3 class="message">Choose categories:</h3>
-                <section class="option">
-                    <label for="math">
-                        <input type="checkbox"name="math" checked>
-                        <span><i class="fas fa-square-root-alt"></i> Math</span>
-                    </label>                    
+            <section class="intertwined-optional-timelines">
+                <section class="options">
+                    <h3 class="message">Choose categories:</h3>
+                    <section class="option">
+                        <label for="math">
+                            <input type="checkbox"name="math" checked>
+                            <span><i class="fas fa-square-root-alt"></i> Math</span>
+                        </label>                    
+                    </section>
+                    <section class="option">
+                        <label for="programming">
+                            <input type="checkbox" name="programming" checked>
+                            <span><i class="fas fa-code"></i> Programming</span>
+                        </label>                    
+                    </section>
+                    <section class="option">
+                        <label for="robotics">
+                            <input type="checkbox" name="robotics" unchecked>
+                            <span><i class="fas fa-robot"></i> Robotics</span>
+                        </label>                    
+                    </section>
+                    <section class="option">
+                        <label for="music">
+                            <input type="checkbox" name="music" unchecked>
+                            <span><i class="fas fa-music"></i> Music</span>
+                        </label>                    
+                    </section>
+                    <section class="option">
+                        <label for="english">
+                            <input type="checkbox" name="english" unchecked>
+                            <span><i class="language-icon">a</i> English</span>
+                        </label>                    
+                    </section>
+                    <section class="option">
+                        <label for="german">
+                            <input type="checkbox" name="german" unchecked>
+                            <span><i class="language-icon">ä</i> German</span>
+                        </label>                    
+                    </section>
+                    <section class="option">
+                        <label for="technical-sketching">
+                            <input type="checkbox" name="technical-sketching" unchecked>
+                            <span><i class="fas fa-pencil-alt"></i> Technical Sketching</span>
+                        </label>                    
+                    </section>
+                    <section class="option">
+                        <label for="math-linguistics">
+                            <input type="checkbox" name="math-linguistics" data-bg="blue" unchecked>
+                            <span><i class="fas fa-language"></i> Math Linguistics</span>
+                        </label>                    
+                    </section>
+                    <section class="option">
+                        <label for="miscellaneous">
+                            <input type="checkbox" name="miscellaneous" data-bg="blue" unchecked>
+                            <span><i class="fas fa-cubes"></i> Miscellaneous</span>
+                        </label>                    
+                    </section>
                 </section>
-                <section class="option">
-                    <label for="programming">
-                        <input type="checkbox" name="programming" checked>
-                        <span><i class="fas fa-code"></i> Programming</span>
-                    </label>                    
+                <section class="timeline">
+                    <section class="line special">
+                        <section class="shadow-wrapper"><section class="arrow1"></section></section>
+                        <section class="shadow-wrapper"><section class="arrow2"></section></section>
+                    </section>
+                    <section class="achievements"></section>
                 </section>
-                <section class="option">
-                    <label for="robotics">
-                        <input type="checkbox" name="robotics" unchecked>
-                        <span><i class="fas fa-robot"></i> Robotics</span>
-                    </label>                    
-                </section>
-                <section class="option">
-                    <label for="music">
-                        <input type="checkbox" name="music" unchecked>
-                        <span><i class="fas fa-music"></i> Music</span>
-                    </label>                    
-                </section>
-                <section class="option">
-                    <label for="english">
-                        <input type="checkbox" name="english" unchecked>
-                        <span><i class="language-icon">a</i> English</span>
-                    </label>                    
-                </section>
-                <section class="option">
-                    <label for="german">
-                        <input type="checkbox" name="german" unchecked>
-                        <span><i class="language-icon">ä</i> German</span>
-                    </label>                    
-                </section>
-                <section class="option">
-                    <label for="technical-sketching">
-                        <input type="checkbox" name="technical-sketching" unchecked>
-                        <span><i class="fas fa-pencil-alt"></i> Technical Sketching</span>
-                    </label>                    
-                </section>
-                <section class="option">
-                    <label for="math-linguistics">
-                        <input type="checkbox" name="math-linguistics" data-bg="blue" unchecked>
-                        <span><i class="fas fa-language"></i> Math Linguistics</span>
-                    </label>                    
-                </section>
-                <section class="option">
-                    <label for="miscellaneous">
-                        <input type="checkbox" name="miscellaneous" data-bg="blue" unchecked>
-                        <span><i class="fas fa-cubes"></i> Miscellaneous</span>
-                    </label>                    
-                </section>
+                <script src="./js/db.js"></script>
+                <script src="./js/timeline.js"></script>
+                <script>
+                    buildTimeline(achievements, 'achievements');             
+                    addEventListenersToCheckboxes(achievements, 'achievements');
+                    centerImages();
+                </script>
             </section>
-            <section class="timeline">
-                <section class="line special">
-                    <section class="shadow-wrapper"><section class="arrow1"></section></section>
-                    <section class="shadow-wrapper"><section class="arrow2"></section></section>
-                </section>
-                <section class="achievements"></section>
-            </section>
-            <script src="./js/db.js"></script>
-            <script src="./js/timeline.js"></script>
-            <script>
-                buildTimeline(achievements, 'achievements');             
-                addEventListenersToCheckboxes(achievements, 'achievements');
-                centerImages();
-            </script>
         </section>
     </section>
     <section class="big-img hidden">
