@@ -90,7 +90,7 @@ const buildTimeline = (page, pagename) => {
             <section class="event-date">${pt[0].date}</section>
             <section class="event-info reveal">
                 <h3 class="name">${pt[0].eventname}</h3>
-                <section class="diplomas scrollable">
+                <section class="event-images scrollable">
                     ${pt.map(diploma => `
                     <section class="diploma">
                         <img class="diploma-photo expanded" 
@@ -106,10 +106,10 @@ const buildTimeline = (page, pagename) => {
 
 const centerImages = () => {
     setTimeout(() => {
-        Array.from(document.getElementsByClassName('diplomas')).forEach(diplomas => {
+        Array.from(document.getElementsByClassName('event-images')).forEach(diplomas => {
             if(diplomas.children.length == 1 || 
             (diplomas.children.length == 2 && diplomas.children[0].clientWidth + diplomas.children[1].clientWidth < diplomas.clientWidth))
-            diplomas.classList.add('centered')
+            diplomas.classList.add('centered');
         });
     }, 1000);
 };

@@ -317,7 +317,7 @@
     }
 }
 
-.events .event .event-info .diplomas{
+.events .event .event-info .event-images{
     width: 100%;
     height: 14em;
     padding: 1em;
@@ -331,15 +331,15 @@
     white-space: nowrap;
 }
 
-.events .event .event-info .diplomas.centered{
+.events .event .event-info .event-images.centered{
     justify-content: center;
 }
 
-.events .event .event-info .diplomas .diploma{
+.events .event .event-info .event-images .diploma{
     height: 100%;
 }
 
-.events .event .event-info .diplomas .diploma .diploma-photo{
+.events .event .event-info .event-images .diploma .diploma-photo{
     height: 100%;
     width: auto;
     display: inline-block;
