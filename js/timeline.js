@@ -1,4 +1,4 @@
-const parent = document.querySelectorAll('.intertwined-optional-timelines .timeline .achievements')[0];
+const parent = document.querySelectorAll('.intertwined-optional-timelines .timeline .events')[0];
 const checkboxes = Array.from(document.querySelectorAll('input[type="checkbox"]'));
 const checkboxesParent = document.getElementsByClassName('options')[0];
 const subjectIcons = {
