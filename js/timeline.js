@@ -77,7 +77,9 @@ const buildTimeline = (page, pagename) => {
     }
     if(cur.length > 0) timepoints.push(cur);
     parent.innerHTML = '';
-    if(timepoints.length === 0) {
+    if(chosen.length === 0) {
+        parent.innerHTML = '<h2 class="empty-category">You haven\'t chosen any category.</h2>';
+    } else if(timepoints.length === 0) {
         parent.innerHTML = '<h2 class="empty-category">There are no records in this category, yet.</h2>';
     }
     for(let pt of timepoints) {

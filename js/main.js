@@ -1,6 +1,15 @@
 /*       Header       */
-let menuIcon = document.getElementsByClassName('menu-icon')[0]
-setTimeout(function(){ menuIcon.style.visibility = 'visible'; }, 850)
+let menuIcon = document.getElementsByClassName('menu-icon')[0];
+setTimeout(function(){ menuIcon.style.visibility = 'visible'; }, 850);
+
+/*       Fix Full Width       */
+function adjustWidth() {
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+    document.querySelector('body').style.width = `calc(100vw - ${scrollbarWidth}px)`;
+}
+
+window.addEventListener('resize', adjustWidth);
+window.addEventListener('load', adjustWidth);
 
 /*       Scroll Effect       */
 function reveal() {

@@ -76,7 +76,7 @@
                 </section>
             </section>
             <script>
-                var years = new Date(new Date() - new Date(2003, 10, 25)).getFullYear() - 1970
+                var years = new Date(new Date() - new Date(2003, 11, 25)).getFullYear() - 1970
                 document.getElementsByClassName('age-data')[0].innerHTML = years
             </script>
             <script type="text/javascript" src="./js/effects/vanilla-tilt.js"></script>
@@ -109,11 +109,15 @@
                             <a class="media-link" href="https://github.com/Kristiyan025">Kristiyan025</a>
                         </li>
                         <li class="media">
+                            <i class="fa fa-gitlab media-icon i-gitlab"></i>:
+                            <a class="media-link" href="https://gitlab.com/Kristiyan025">Kristiyan025</a>
+                        </li>
+                        <li class="media">
                             <i class="fa fa-linkedin-square media-icon i-linkedin"></i>:
                             <a class="media-link" href="https://www.linkedin.com/in/kristiyan-garchev-96b668210">Kristiyan Garchev</a>
                         </li>
                         <li class="media">
-                            <img class="media-icon" src="./images/index/codeforces-logo.png" alt="CodeForces' Logo"></img>:
+                            <img class="media-icon unselectable"  src="./images/index/codeforces-logo.png" unselectable="on" alt="CodeForces' Logo"></img>:
                             <a class="media-link" href="https://codeforces.com/profile/Programist025">Programist025</a>
                         </li>
                         <li class="media">
@@ -125,7 +129,9 @@
             </section>
         </section>
     </section>
-    <footer class="content-container footer">
+    <script src="./js/index.js"></script>
+    <script src="./js/empty-page-message-adder.js"></script>
+    <footer class="content-container footer unselectable"  unselectable="on">
         <ul class="footer-content">
             <li class="column">
                 <h3 class="title">Pages</h3>
