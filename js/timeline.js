@@ -86,7 +86,7 @@ const buildTimeline = (page, pagename) => {
         pt.sort((a, b) => (a.file > b.file ? 1 : -1));
         parent.innerHTML += `                    
         <section class="event">
-            <section class="timepoint">${subjectIcons[pt[0].folder]}</section>
+            <section class="event-timepoint-badge">${subjectIcons[pt[0].folder]}</section>
             <section class="date">${pt[0].date}</section>
             <section class="event-info reveal">
                 <h3 class="name">${pt[0].eventname}</h3>
