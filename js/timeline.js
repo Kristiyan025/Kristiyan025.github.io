@@ -104,14 +104,14 @@ const buildTimeline = (page, pagename) => {
     fixMargins();
 }
 
-const centerImages = () => {
+const centerImages = (timeoutPeriodMillisecs=1000) => {
     setTimeout(() => {
         Array.from(document.getElementsByClassName('event-images')).forEach(diplomas => {
             if(diplomas.children.length == 1 || 
             (diplomas.children.length == 2 && diplomas.children[0].clientWidth + diplomas.children[1].clientWidth < diplomas.clientWidth))
             diplomas.classList.add('centered');
         });
-    }, 1000);
+    }, timeoutPeriodMillisecs);
 };
 
 const addEventListenersToCheckboxes = (page, pagename) => {
