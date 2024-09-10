@@ -1,6 +1,6 @@
 const fs = require('fs');
 const srcPath = '../images';
-const resPath = './db.js';
+const resPath = './db-diplomas.js';
 
 const populate = folder => {
   let content = `let ${folder} = {\n`;
