@@ -87,7 +87,7 @@ const buildTimeline = (page, pagename) => {
         parent.innerHTML += `                    
         <section class="event">
             <section class="event-timepoint-badge">${subjectIcons[pt[0].folder]}</section>
-            <section class="date">${pt[0].date}</section>
+            <section class="event-date">${pt[0].date}</section>
             <section class="event-info reveal">
                 <h3 class="name">${pt[0].eventname}</h3>
                 <section class="diplomas scrollable">
