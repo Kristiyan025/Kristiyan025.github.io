@@ -92,7 +92,7 @@ const buildTimeline = (page, pagename) => {
                 <h3 class="event-name">${pt[0].eventname}</h3>
                 <section class="event-images scrollable">
                     ${pt.map(diploma => `
-                    <section class="diploma">
+                    <section class="event-image-wrapper">
                         <img class="diploma-photo expanded" 
                             src="./images/${pagename}/${diploma.folder}/${diploma.file}" alt="${diploma.eventname}" loading="lazy">
                     </section>                    
