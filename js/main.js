@@ -1,6 +1,6 @@
 /*       Header       */
 let menuIcon = document.getElementsByClassName('menu-icon')[0];
-setTimeout(function(){ menuIcon.style.visibility = 'visible'; }, 850);
+menuIcon.style.visibility = 'visible';
 
 /*       Fix Full Width       */
 function adjustWidth() {
