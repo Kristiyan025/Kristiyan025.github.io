@@ -1,7 +1,7 @@
-.achievement .event-info{
-    width: 70%;
+.event .event-info{
+    width: 70% !important;
 }
 
-.achievement .event-info .diplomas{
-    height: 23em;
+.event .event-info .diplomas{
+    height: 23em !important;
 }

@@ -26,12 +26,12 @@ const fixMargins = () => {
     let i = 0;
     let prevDate = new Date();
     if(parent.children.length > 0)
-    for(const achievement of Array.from(parent.children)) {
-        if(achievement.children.length > 1) {
-            const dateParts = achievement.children[1].innerText.split('/');
+    for(const event of Array.from(parent.children)) {
+        if(event.children.length > 1) {
+            const dateParts = event.children[1].innerText.split('/');
             const curDate = new Date(dateParts[2], dateParts[1], dateParts[0])
             if(i > 0) {
-                achievement.style.marginTop = 
+                event.style.marginTop = 
                     `calc(${sigmoid(scaledDayDifference(prevDate, curDate)) * range + lowBound} * var(--font-size))`;
             }
             prevDate = curDate;
@@ -85,7 +85,7 @@ const buildTimeline = (page, pagename) => {
     for(let pt of timepoints) {
         pt.sort((a, b) => (a.file > b.file ? 1 : -1));
         parent.innerHTML += `                    
-        <section class="achievement">
+        <section class="event">
             <section class="timepoint">${subjectIcons[pt[0].folder]}</section>
             <section class="date">${pt[0].date}</section>
             <section class="event-info reveal">

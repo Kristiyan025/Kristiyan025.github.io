@@ -173,21 +173,21 @@
     position: relative;
 }
 
-.achievement{
+.events .event{
     width: 100%;
     margin-top: calc(4 * var(--font-size));
     position: relative;
 }
 
-.achievement:first-child{
+.events .event:first-child{
     margin-top: 0;
 }
 
-.achievement:last-child{
+.events .event:last-child{
     margin-bottom: 2em;
 }
 
-.achievement .timepoint{
+.events .event .timepoint{
     position: absolute;
     --width: calc(1.5 * 1.5 * var(--thickness));
     left: calc(0.5 * var(--thickness) - 0.5 * var(--width));
@@ -207,7 +207,7 @@
     transition: all .3s ease-in;
 }
 
-.achievement .timepoint::before{
+.events .event .timepoint::before{
     content: '';
     position: absolute;
     top: calc(-0.75 * var(--thickness));
@@ -219,7 +219,7 @@
     border-radius: 50%;
 }
 
-.achievement .timepoint::after{
+.events .event .timepoint::after{
     content: '';
     position: absolute;
     top: 0;
@@ -231,8 +231,8 @@
     border-radius: 50%;
 }
 
-.achievement .timepoint::before,
-.achievement .timepoint::after{
+.events .event .timepoint::before,
+.events .event .timepoint::after{
     box-shadow: .2em .2em .3em rgba(0, 0, 0, 0.068),
                 0 .5em .3em rgba(0, 0, 0, 0.048),
                 inset -.1em -.1em .2em rgba(0, 0, 0, 0.226),
@@ -240,11 +240,11 @@
     transition: inherit;
 }
 
-.achievement .timepoint:hover{
+.events .event .timepoint:hover{
     transform: scale(1.1);
 }
 
-.achievement .date{
+.events .event .date{
     position: absolute;
     --height: calc(.6 * var(--font-size));
     left: calc(2.4 * var(--font-size));
@@ -317,7 +317,7 @@
     }
 }
 
-.achievement .event-info .diplomas{
+.events .event .event-info .diplomas{
     width: 100%;
     height: 14em;
     padding: 1em;
@@ -331,15 +331,15 @@
     white-space: nowrap;
 }
 
-.achievement .event-info .diplomas.centered{
+.events .event .event-info .diplomas.centered{
     justify-content: center;
 }
 
-.achievement .event-info .diplomas .diploma{
+.events .event .event-info .diplomas .diploma{
     height: 100%;
 }
 
-.achievement .event-info .diplomas .diploma .diploma-photo{
+.events .event .event-info .diplomas .diploma .diploma-photo{
     height: 100%;
     width: auto;
     display: inline-block;
