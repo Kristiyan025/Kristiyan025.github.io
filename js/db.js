@@ -34,6 +34,9 @@ let achievements = {
     `2016-09-09_Math Tournament '30 Problems in 30 Languages'.jpg`,
     `2022-10-29_9-th National Student Olympiad in Computer Mathematics.jpg`,
     `2023-03-07_17-th South-Eastern European Mathematical Olympiad for University Students.jpg`,
+    `2024-03-03_16-th Open Mathematical Olympiad for University Students (OMOUS).jpg`,
+    `2024-05-17_51-st National Student Olympiad in Mathematics-PART-1.jpg`,
+    `2024-05-17_51-st National Student Olympiad in Mathematics-PART-2.jpg`,
   ],
   'music' : [
     `2016-04-01_7-th National Folklore Competition 'Pesenna Duga nad Kutev'-PART-1.jpg`,
@@ -76,7 +79,7 @@ let achievements = {
     `2016-05-31_16-th International Ethno Festival 'Decata na Balkanite'.jpg`,
     `2021-07-03_26-th National Folklore Competition 'Dinyo Marinov'.jpg`,
     `2021-07-16_National Music and Art Competition 'Orfeevi Talanti'.jpg`,
-    `2020-07-03_1-st Online Folklore Competition 'Bulgarin'.jpg`
+    `2020-07-03_1-st Online Folklore Competition 'Bulgarin'.jpg`,
   ],
   'miscellaneous' : [
     `2014-03-01_Competition 'Fantaziya'.jpg`,
@@ -91,7 +94,7 @@ let achievements = {
     `2014-05-29_Competition 'Detski Ekosvyat'.jpg`,
     `2012-04-04_Competition 'Gorata i 4-te Godishni Sezona'.jpg`,
     `2019-04-12_Patron Saint's Day 'Zemyata - nash obsht dom'.jpg`,
-    `2012-10-27_Reading Contest 'Biizus, Ramona and Henry'.jpg`
+    `2012-10-27_Reading Contest 'Biizus, Ramona and Henry'.jpg`,
   ],
   'programming' : [
     `2021-05-15_Softuniada.jpg`,
@@ -104,28 +107,29 @@ let achievements = {
     `2019-04-20_Softuniada.jpg`,
     `2020-10-27_12th International Autumn Tournament in Informatics (IATI).jpg`,
     `2018-11-11_Informatics Contest 'Bobur'.jpg`,
-    `2021-03-13_National Olympiad in Informatics (NOI).jpg`
+    `2021-03-13_National Olympiad in Informatics (NOI).jpg`,
+    `2024-03-23_6-th SU FMI Algorithmi Clash.jpg`,
   ],
   'german' : [
     `2018-01-17_Nationalwettbewerb Klett in Deutsch als Fremdsprache - Runde 1.jpg`,
-    `2021-04-29_Nationalwettbewerb Klett in Deutsch als Fremdsprache - Runde 1.jpg`
+    `2021-04-29_Nationalwettbewerb Klett in Deutsch als Fremdsprache - Runde 1.jpg`,
   ],
   'english' : [
     `2016-02-29_National Spelling Bee.jpg`,
     `2013-02-09_National Spelling Bee.jpg`,
-    `2015-03-06_National Spelling Bee.jpg`
+    `2015-03-06_National Spelling Bee.jpg`,
   ],
   'technical-sketching' : [
     `2017-04-24_National Olympiad in Technical Sketching - Finals.jpg`,
     `2018-04-22_National Olympiad in Technical Sketching - Finals.jpg`,
-    `2020-06-28_National Olympiad in Technical Sketching - Finals.jpg`
+    `2020-06-28_National Olympiad in Technical Sketching - Finals.jpg`,
   ],
   'math-linguistics' : [
     `2021-01-23_National Competition in Linguistics.jpg`,
-    `2020-01-24_National Competition in Math Linguistics.jpg`
+    `2020-01-24_National Competition in Math Linguistics.jpg`,
   ],
   'robotics' : [
-    `2020-11-10_BAN's Session.jpg`
+    `2020-11-10_BAN's Session.jpg`,
   ]
 };
 
@@ -169,7 +173,7 @@ let education = {
     `2022-06-17_Online Course 'Optimize Tensorflow Models for Deployment with TensorRT' from Coursera.jpg`,
   ],
   'miscellaneous' : [
-    `2012-03-29_Level 'A' within The ULEN Ski and Snowboard School.jpg`
+    `2012-03-29_Level 'A' within The ULEN Ski and Snowboard School.jpg`,
   ],
   'school' : [
     `2010-05-20_Certificate for Finished Kindergarten.jpg`,
@@ -197,7 +201,7 @@ let education = {
     `2020-05-23_Upper-Intermediate Level 1 (B2) within American University in Bulgaria (AUBG).jpg`,
     `2020-01-26_Intermediate Level 2 (B1 - B2) within American University in Bulgaria (AUBG).jpg`,
     `2021-01-27_Upper-Intermediate Level 2 (B2.2) within American University in Bulgaria (AUBG).jpg`,
-    `2021-05-21_Advanced Level (C1) within American University in Bulgaria (AUBG).jpg`
+    `2021-05-21_Advanced Level (C1) within American University in Bulgaria (AUBG).jpg`,
   ]
 };
 
