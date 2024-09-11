@@ -533,7 +533,7 @@ let skills = {
         }),
         new Skill({
             name: 'TimescaleDB',
-            badgeImageUrl: `timescale-db.jpg`,
+            badgeImageUrl: `timescale-db.png`,
             link: 'https://www.timescale.com/',
             workExperiences: [
                 new WorkExperience({company: TRADING_212, durationMonths: yearsToMonths(1)}),
