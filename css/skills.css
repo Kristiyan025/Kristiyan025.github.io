@@ -1,0 +1,79 @@
+ul.skills-list{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    width: calc(100% - 3.8%);
+}
+
+ul.skills-list > li{
+    margin-bottom: calc(.45 * var(--font-size));
+}
+
+ul.skills-list > li:last-child{
+    width: 100%;
+    margin-bottom: 0;
+}
+
+
+
+section.skill-badge{
+    --size: calc(2.8 * var(--font-size));
+    --bar-thickness: calc(.4 * var(--font-size));
+    height: var(--size);
+    width: var(--size);
+    max-width: var(--size);
+    max-height: var(--size);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+section.skill-badge::before,
+section.skill-badge::after{
+    position: absolute;
+    top: var(--bar-thickness);
+    right: var(--bar-thickness);
+    bottom: var(--bar-thickness);
+    left: var(--bar-thickness);
+    border-radius: 50%;
+    
+}
+
+section.skill-badge::before{
+    z-index: 1;
+    content: '';
+    border: var(--bar-thickness) solid transparent; /* Create space for the border */
+    background: #faf7f5;
+}
+
+section.skill-badge::after{
+    z-index: 3;
+    content: '';
+    box-shadow: inset calc(.05 * var(--font-size)) calc(.05 * var(--font-size)) calc(.1 * var(--font-size)) #292929a2,
+                inset calc(-.05 * var(--font-size)) calc(-.05 * var(--font-size)) calc(.1 * var(--font-size)) #292929a2;;
+}
+
+section.skill-badge > img.skill-badge-image{
+    --curr-size: calc(var(--size) / sqrt(2));
+    width: var(--curr-size);
+    height: var(--curr-size);
+    object-fit: contain;
+    display: block;
+    z-index: 2;
+    border-radius: calc(0.1 * var(--curr-size));
+}
+
+h3.skill-header-text{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    font-size: calc(.8 * var(--font-size));
+    margin-left: var(--font-size);
+}
+
+.skill-header-text > .skill-link{ 
+    text-decoration: none;
+    color: inherit;
+}

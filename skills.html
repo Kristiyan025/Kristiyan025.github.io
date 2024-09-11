@@ -9,8 +9,10 @@
     <link rel="ICON" href="./images/main/logo.ico" type="image/ico" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/skills.css">
     <script src="./js/main.js" defer></script>
     <script src="https://kit.fontawesome.com/26ff0a2b49.js" crossorigin="anonymous"></script>
+    <script src="./js/db-skills.js"></script>
 </head>
 <body>
     <header class="content-container header">
@@ -42,10 +44,17 @@
     <section class="body">
         <section class="content-container">
             <img class="title unselectable" src="./images/main/experience.png" alt="Skills" unselectable="on">
-            
+            <ul class="skills">
+                <script src="./js/gradient.js"></script>
+                <script src="./js/skills-adder.js"></script>
+                <script type="text/javascript">
+                    addSkills(document.currentScript.parentNode);
+                </script>
+            </ul>
         </section>
     </section>
     <script src="./js/empty-page-message-adder.js"></script>
+    <script src="./js/fix-tooltips-location.js"></script>
     <footer class="content-container footer unselectable" unselectable="on">
         <ul class="footer-content">
             <li class="column">
