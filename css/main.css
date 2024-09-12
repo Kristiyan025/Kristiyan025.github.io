@@ -510,6 +510,7 @@ body{
     }
 }
 
+/*       Collapsible       */
 .collapsible{
     /* margin-bottom: calc(.45 * var(--font-size)); */
     position: relative;
@@ -595,20 +596,21 @@ body{
     transform: translateY(0%) scaleY(1.0);
 }
 
-.tooltip-container {
+/*       Tooltip       */
+.tooltip-container{
     position: relative;
     display: inline-block;
-  }
+}
   
-  .tooltip-trigger {
+.tooltip-trigger{
     padding: 10px 20px;
     border: none;
     background-color: #007BFF;
     color: white;
     cursor: pointer;
-  }
+}
   
-  .tooltip {
+.tooltip{
     position: absolute;
     background-color: #333;
     color: #fff;
@@ -619,32 +621,96 @@ body{
     display: none;
     z-index: 1000;
     max-width: 200px;
-  }
+}
   
-  .tooltip.top {
+.tooltip.top{
     bottom: 100%;
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 5px;
-  }
+}
   
-  .tooltip.right {
+.tooltip.right{
     top: 50%;
     left: 100%;
     transform: translateY(-50%);
     margin-left: 5px;
-  }
+}
   
-  .tooltip.bottom {
+.tooltip.bottom{
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
     margin-top: 5px;
-  }
+}
   
-  .tooltip.left {
+.tooltip.left{
     top: 50%;
     right: 100%;
     transform: translateY(-50%);
     margin-right: 5px;
-  }
+}
+
+/*       Tabs       */
+.tab-container{
+    --tab-line-height: calc(.5 * var(--font-size));
+    position: relative;
+    padding-top: var(--tab-line-height);
+}
+  
+.tab-container .tab-header{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: linear-gradient(to bottom, #fffffff8 0%, #ffffffbb 60%, #ffffff13 100%);
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    z-index: 2;
+}
+  
+.tab-container .tab-header .tab-link{
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, background-image 0.2s;
+    font-size: calc(.56 * var(--tab-line-height));
+    border-radius: 5px;
+}
+  
+.tab-container .tab-header .tab-link.active{
+    background-color: #c6d2dd; /* Active tab color */
+    font-weight: bold;
+}
+  
+.tab-container .tab-header .tab-link span{
+    background: none;
+    background-clip: none;
+    -webkit-background-clip: none;
+    color: inherit;
+}
+
+.tab-container .tab-header .tab-link.active span{
+    --color: #eb9b7b;
+    --contour-color: var(--highlight-color);
+    background: linear-gradient(to top, var(--contour-color), var(--color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.tab-container .tab-content-container{
+    position: relative;
+    z-index: 1;
+}
+
+.tab-container .tab-content-container .tab-content {
+    display: none; /* Hidden by default */
+}
+  
+.tab-container .tab-content-container .tab-content.active {
+    display: block; /* Shows the active tab */
+}

@@ -10,9 +10,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/timeline.css">
-    <link rel="stylesheet" href="./css/experience.css">
-    <script src="./js/main.js" defer></script>
+    <link rel="stylesheet" href="./css/work-experience.css">
     <script src="https://kit.fontawesome.com/26ff0a2b49.js" crossorigin="anonymous"></script>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/tabs-mechanism.js"></script>
 </head>
 <body>
     <header class="content-container header">
@@ -54,34 +55,161 @@
                         <section class="event" id="trading-212">
                             <section class="event-timepoint-badge"><i class="fas fa-graduation-cap"></i></section>
                             <section class="event-date">05.2023-03.2024</section>
-                            <section class="event-info reveal">
-                                <a class="name-link" href="https://www.trading212.com/">
-                                    <h3 class="event-name">Junior Software Engineer at</h3>
-                                    <h3 class="event-name">Trading 212</h3>
-                                </a>
-                                <section class="event-images scrollable">
-                                    <section class="event-image-wrapper">
-                                        <img class="event-image expanded special" style="width: 100%"
-                                            src="./images/experience/Trading212.jpg" 
-                                            alt="Trading 212 Logo" loading="lazy">
-                                    </section> 
+                            <section class="tab-container reveal">
+                                <section class="tab-header">
+                                    <button class="tab-link active" onclick="openTab(event, 'tab-trading212-company')"><span>Company</span></button>
+                                    <button class="tab-link" onclick="openTab(event, 'tab-trading212-experience')"><span>My Experience</span></button>
+                                    <!-- <button class="tab-link" onclick="openTab(event, 'tab-trading212-skills')"><span>Utilized skills</span></button> -->
+                                </section>
+
+                                <section class="event-info tab-content-container">
+                                    <section id="tab-trading212-company" class="tab-content active">
+                                        <a class="name-link" href="https://www.trading212.com/">
+                                            <h3 class="event-name">Junior Software Engineer at</h3>
+                                            <h3 class="event-name">Trading 212</h3>
+                                        </a>
+                                        <section class="event-images scrollable">
+                                            <section class="event-image-wrapper">
+                                                <img class="event-image expanded special" style="width: 100%"
+                                                    src="./images/experience/Trading212.jpg" 
+                                                    alt="Trading 212 Logo" loading="lazy">
+                                            </section> 
+                                        </section>
+                                        <section class="company-description">
+                                            The company develops a cutting-edge trading Web/Mobile app
+                                            that offers fractional & 24/5 share trading. 
+                                            Very popular in Britain & Bulgaria.
+                                        </section>
+                                    </section>
+
+                                    <section id="tab-trading212-experience" class="tab-content">
+                                        <h2><span>My work there, in the Quant-Trading team, involved:</span></h2>
+                                        <ul class="duties">
+                                            <li class="duty">
+                                                Working on (refactoing/improving) the model for settings generation.
+                                                The settings are regenerated very often & the inner portfolio uses them to rebalance itself.
+                                                By the end, I was the leading developer working on the settings generation, 
+                                                as I had more understanding of the math concepts than the rest of the members of the team.
+                                            </li>
+                                            <li class="duty">
+                                                Working on new features, like 24/5 trading. 
+                                            </li>
+                                            <li class="duty">
+                                                Adding new dealers. 
+                                            </li>
+                                            <li class="duty">
+                                                Migrating microservices to AWS. 
+                                            </li>
+                                            <li class="duty">
+                                                Creating wrapper Python logging library, in order to ease integration with Kibana & make searching faster. 
+                                                The main idea is that a log's message & its parameters should be separate things. 
+                                                Furthermore, each logs goes to a pipeline of preprocessors before it reaches its final destination.
+                                            </li>
+                                            <li class="duty">
+                                                Reading both company & third party documentations. Writing documentation for everything I created/modified.
+                                            </li>
+                                            <li class="duty">
+                                                Gaining knowlage about databases: PostgreSQL, MySQL, MariaDB/InnoDB, TimescaleDB, Apache Cassandra/AWS Keyspaces,
+                                                Redis, ClickHouse, Redis.
+                                            </li>
+                                            <li class="duty">
+                                                Learning to use new tools, like: Celery, Redis, Kafka, Spring Boot, AWS.
+                                            </li>
+                                            <li class="duty">
+                                                Refactoring code.
+                                            </li>
+                                            <li class="duty">
+                                                Automating tasks, executed regularly by programmers.
+                                            </li>
+                                            <li class="duty">
+                                                Writing tests for my code, as for the most part of my work there, my team didn't have a QA developer.
+                                            </li>
+                                            <li class="duty">
+                                                Working with microservice architecture. 
+                                            </li>
+                                        </ul>
+                                    </section>
+                                
+                                    <!-- <section id="tab-trading212-skills" class="tab-content">
+                                        <h2>Tab 3 Content</h2>
+                                        <p>This is the content for Tab 3.</p>
+                                    </section> -->
                                 </section>
                             </section>
                         </section>  
                         <section class="event" id="smartsoft-healthcare">
                             <section class="event-timepoint-badge"><i class="fas fa-graduation-cap"></i></section>
                             <section class="event-date">03.2022-03.2023</section>
-                            <section class="event-info reveal">
-                                <a class="name-link" href="https://columbo.me/">
-                                    <h3 class="event-name">Machine Learning Junior Developer at</h3>
-                                    <h3 class="event-name">Smart Soft Healthcare</h3>
-                                </a>
-                                <section class="event-images scrollable">
-                                    <section class="event-image-wrapper">
-                                        <img class="event-image expanded special" style="width: 100%"
-                                            src="./images/experience/Smart-Soft-Healthcare.png" 
-                                            alt="Smart Soft Healthcare Logo" loading="lazy">
-                                    </section> 
+                            <section class="tab-container reveal">
+                                <section class="tab-header">
+                                  <button class="tab-link active" onclick="openTab(event, 'tab-smartsoft-company')"><span>Company</span></button>
+                                  <button class="tab-link" onclick="openTab(event, 'tab-smartsoft-experience')"><span>My Experience</span></button>
+                                  <!-- <button class="tab-link" onclick="openTab(event, 'tab-smartsoft-skills')"><span>Utilized skills</span></button> -->
+                                </section>
+                              
+                                <section class="event-info tab-content-container">
+                                    <section id="tab-smartsoft-company" class="tab-content active">
+                                        <a class="name-link" href="https://columbo.me/">
+                                            <h3 class="event-name">Machine Learning Junior Developer at</h3>
+                                            <h3 class="event-name">Smart Soft Healthcare</h3>
+                                        </a>
+                                        <section class="event-images scrollable">
+                                            <section class="event-image-wrapper">
+                                                <img class="event-image expanded special" style="width: 100%"
+                                                    src="./images/experience/Smart-Soft-Healthcare.png" 
+                                                    alt="Smart Soft Healthcare Logo" loading="lazy">
+                                            </section> 
+                                        </section>
+                                        <section class="company-description">
+                                            The company develops a medical software for analysing 
+                                            (Lumbar) spine MRI tests by utilising ML models for Instance segmentation
+                                            (Computer vision). The software can speed up significantly the work of radiologist. 
+                                        </section>
+                                    </section>
+                                
+                                    <section id="tab-smartsoft-experience" class="tab-content">
+                                        <h2><span>My work there involved:</span></h2>
+                                        <ul class="duties">
+                                            <li class="duty">
+                                                Reading scienctific AI/ML papers.
+                                            </li>
+                                            <li class="duty">
+                                                Performing experiments with different model architectures & filtered datasets.
+                                            </li>
+                                            <li class="duty">
+                                                Gained knowledge about ML model quantisation.
+                                            </li>
+                                            <li class="duty">
+                                                Performing Cross-validation.
+                                            </li>
+                                            <li class="duty">
+                                                Transfering the model training to Google Cloud.
+                                            </li>
+                                            <li class="duty">
+                                                Clearing the data from MRI tests' descriptions from radiologist.
+                                            </li>
+                                            <li class="duty">
+                                                Integrating new MRI data into DB from new hospitals, as each sends data in different format.
+                                            </li>
+                                            <li class="duty">
+                                                Generating new augmented training data & comparing model performance & Efemarai software.
+                                            </li>
+                                            <li class="duty">
+                                                Creating visualisations for newly added pathologies.
+                                            </li>
+                                            <li class="duty">
+                                                Comparing model metrics and saving them in human readable format for BI people. 
+                                            </li>
+                                            <li class="duty">
+                                                Working with monolithic architecture. 
+                                            </li>
+                                        </ul>
+                                    </section>
+                                
+                                    <!-- <section id="tab-smartsoft-skills" class="tab-content">
+                                        <h2>Tab 3 Content</h2>
+                                        <p>This is the content for Tab 3.</p>
+                                    </section> -->
                                 </section>
                             </section>
                         </section>     

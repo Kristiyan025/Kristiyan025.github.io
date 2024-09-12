@@ -1,0 +1,46 @@
+.content-container .work-places{
+    margin-block: calc(2 * var(--font-size)) calc(1 * var(--font-size));
+    position: relative;
+}
+
+.tab-container .tab-header{
+    right: calc(.8 * var(--font-size));
+}
+
+.tab-container .tab-content-container{
+    padding: calc(.7 * var(--font-size));
+}
+
+.event-info .company-description {
+    margin-top: calc(.7 * var(--font-size));
+    text-indent: calc(.4 * var(--font-size));
+    color: #013d6e;
+    font-family: 'Poppins', sans-serif;
+    text-shadow: .2em .1em .3em #29292941;
+    font-size: calc(.4 * var(--font-size));
+}
+
+.event-info h2 > span {
+    font-size: calc(.45 * var(--font-size));
+    font-family: 'Poppins', sans-serif;
+    margin-top: calc(.7 * var(--font-size));
+    --color: var(--highlight-color-lighter);
+    --contour-color: var(--highlight-color);
+    background: linear-gradient(to top, var(--color), var(--contour-color));
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.event-info .duties {
+    list-style: none; /* Remove default bullet points */
+    padding-left: 20px;
+    line-height: calc(.47 * var(--font-size));
+  }
+  
+  .event-info .duties .duty::before {
+    content: "\2605"; /* Unicode character for a star (★) */
+    color: gold;
+    font-size: 16px;
+    margin-right: 10px; /* Space between bullet and text */
+  }

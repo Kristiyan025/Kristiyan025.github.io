@@ -11,10 +11,6 @@
     position: relative;
 }
 
-.event-info .name-link{
-    text-decoration: none;
-}
-
 .schools .schools-title{
     position: absolute;
     left: calc(9 * var(--font-size));
