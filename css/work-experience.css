@@ -11,6 +11,13 @@
     padding: calc(.7 * var(--font-size));
 }
 
+.tab-container .tab-content-container .tab-content.active{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .event-info .company-description {
     margin-top: calc(.7 * var(--font-size));
     text-indent: calc(.4 * var(--font-size));
@@ -38,9 +45,9 @@
     line-height: calc(.47 * var(--font-size));
   }
   
-  .event-info .duties .duty::before {
+.event-info .duties .duty::before {
     content: "\2605"; /* Unicode character for a star (★) */
     color: gold;
     font-size: 16px;
     margin-right: 10px; /* Space between bullet and text */
-  }
+}

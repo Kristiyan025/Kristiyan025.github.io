@@ -10,10 +10,12 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/timeline.css">
+    <link rel="stylesheet" href="./css/recommendations.css">
     <link rel="stylesheet" href="./css/work-experience.css">
     <script src="https://kit.fontawesome.com/26ff0a2b49.js" crossorigin="anonymous"></script>
     <script src="./js/main.js" defer></script>
     <script src="./js/tabs-mechanism.js"></script>
+    <script src="./js/fix-pdf-zoom-on-resize.js"></script>
 </head>
 <body>
     <header class="content-container header">
@@ -60,6 +62,7 @@
                                     <button class="tab-link active" onclick="openTab(event, 'tab-trading212-company')"><span>Company</span></button>
                                     <button class="tab-link" onclick="openTab(event, 'tab-trading212-experience')"><span>My Experience</span></button>
                                     <!-- <button class="tab-link" onclick="openTab(event, 'tab-trading212-skills')"><span>Utilized skills</span></button> -->
+                                    <button class="tab-link" onclick="openTab(event, 'tab-trading212-recommendation')"><span>Recommenation</span></button>
                                 </section>
 
                                 <section class="event-info tab-content-container">
@@ -134,6 +137,11 @@
                                         <h2>Tab 3 Content</h2>
                                         <p>This is the content for Tab 3.</p>
                                     </section> -->
+                                
+                                    <section id="tab-trading212-recommendation" class="tab-content">
+                                        <embed class="pdf" src="./images/recommendations/Trading212.pdf" 
+                                               type="application/pdf" title="Trading 212's recommenation" />
+                                    </section>
                                 </section>
                             </section>
                         </section>  
@@ -298,5 +306,8 @@
             &copy; 2022 - <img class="signature" src="images/main/initials_break-it-down_shadow.png" alt="K.I.G.">
         </p>
     </footer>
+    <script type="text/javascript">
+        fixPdfElementZoomOnResize("embed.pdf");
+    </script>
 </body>
 </html>
