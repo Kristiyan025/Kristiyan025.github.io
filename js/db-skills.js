@@ -540,14 +540,6 @@ let skills = {
             ],
         }),
         new Skill({
-            name: 'InfluxDB',
-            badgeImageUrl: `influx-db.png`,
-            link: 'https://www.influxdata.com/',
-            workExperiences: [
-                new WorkExperience({company: SMART_SOFT, durationMonths: 1}),
-            ],
-        }),
-        new Skill({
             name: 'PostgreSQL',
             badgeImageUrl: `postgresql.png`,
             link: 'https://www.postgresql.org/',
