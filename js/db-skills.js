@@ -40,15 +40,81 @@ class Skill {
 /*    Companies / Schools    */
 const SMART_SOFT = `Smart Soft Healthcare`;
 const TRADING_212 = `Trading 212`;
-const MATH_HIGHSCHOOL = `Math & Science Highschool "Acad. S. Koroliov"`;
-const SU_FMI = `Mathematics & Informatics Faculty, Sofia University "St. Kliment Ohridski"`;
+const MATH_HIGHSCHOOL = `Math & Science Highschool`;
+const SU_FMI = `FMI, Sofia University`;
 const SOFTUNI = `Softuni`;
 const IT_KARIERA = `IT Kariera`;
 const UDEMI = `Udemy Courses`;
 const COMEPTITIVE_PROGRAMMING = `Competitive Programming`;
 const AMERICAN_UNI = `American University's Kids/Adults English Program`; 
-const SUMMER_AI_CAMP = `Summer AI camp`;
+const AI_SUMMER_CAMP = `Summer AI camp`;
 const FREE_TIME = `Free Time`;
+
+class Workplace {
+    constructor({name: name, url: url, badgeImageUrl: badgeImageUrl}) {
+        this.name = name;
+        this.url = url;
+        this.badgeImageUrl = badgeImageUrl;
+    }
+}
+
+const workplaceToUrlMap = {
+    [SMART_SOFT]: new Workplace({
+        name: SMART_SOFT, 
+        url: `./work-experience.html#smartsoft-healthcare`, 
+        badgeImageUrl: `./images/experience/Smart-Soft-Healthcare.png`,
+    }),
+    [TRADING_212]: new Workplace({
+        name: TRADING_212, 
+        url: `./work-experience.html#trading-212`, 
+        badgeImageUrl: `./images/skills/workplaces/trading212.png`,
+    }),
+    [MATH_HIGHSCHOOL]: new Workplace({
+        name: MATH_HIGHSCHOOL, 
+        url: `./education.html#math-highschool`, 
+        badgeImageUrl: `./images/education-schools/Math-and-Science-Highschool-Acad-S-Korolyov.jpg`,
+    }),
+    [SU_FMI]: new Workplace({
+        name: SU_FMI, 
+        url: `./education.html#su-fmi`, 
+        badgeImageUrl: `./images/skills/workplaces/su-fmi.jpg`,
+    }),
+    [SOFTUNI]: new Workplace({
+        name: SOFTUNI, 
+        url: `./education.html#softuni`, 
+        badgeImageUrl: `./images/skills/workplaces/softuni.jpg`,
+    }),
+    [IT_KARIERA]: new Workplace({
+        name: IT_KARIERA, 
+        url: `./education.html#it-kariera`, 
+        badgeImageUrl: `./images/skills/workplaces/it-kariera.jpeg`,
+    }),
+    [UDEMI]: new Workplace({
+        name: UDEMI, 
+        url: ``, 
+        badgeImageUrl: `./images/skills/workplaces/udemy.png`,
+    }),
+    [COMEPTITIVE_PROGRAMMING]: new Workplace({
+        name: COMEPTITIVE_PROGRAMMING, 
+        url: ``, 
+        badgeImageUrl: `./images/skills/workplaces/competitive-programing.png`,
+    }),
+    [AMERICAN_UNI]: new Workplace({
+        name: AMERICAN_UNI, 
+        url: ``, 
+        badgeImageUrl: `./images/skills/workplaces/american-uni.png`,
+    }),
+    [AI_SUMMER_CAMP]: new Workplace({
+        name: AI_SUMMER_CAMP, 
+        url: ``, 
+        badgeImageUrl: `./images/skills/workplaces/ai-summer-camp.png`,
+    }),
+    [FREE_TIME]: new Workplace({
+        name: FREE_TIME, 
+        url: ``, 
+        badgeImageUrl: `./images/skills/workplaces/free-time.png`,
+    }),
+};
 
 const yearsToMonths = (years) => 12 * years;
 
@@ -117,7 +183,7 @@ let skills = {
                 }),
                 new Skill({
                     name: 'Tensorflow',
-                    badgeImageUrl: `python_tensorflow.jpg`,
+                    badgeImageUrl: `python_tensorflow.png`,
                     link: 'https://www.tensorflow.org/',
                     workExperiences: [
                         new WorkExperience({company: SMART_SOFT, durationMonths: yearsToMonths(1)}),
@@ -419,7 +485,7 @@ let skills = {
                     badgeImageUrl: `haskell_cabal.png`,
                     link: 'https://www.haskell.org/cabal/',
                     workExperiences: [
-                        new WorkExperience({company: SOFTUNI, durationMonths: 3, isPartOfEducation: true}),
+                        new WorkExperience({company: SU_FMI, durationMonths: 3, isPartOfEducation: true}),
                     ],
                     isLibrary: true,
                 }),
@@ -439,7 +505,7 @@ let skills = {
             badgeImageUrl: `prolog.png`,
             link: 'https://www.swi-prolog.org/',
             workExperiences: [
-                new WorkExperience({company: SUMMER_AI_CAMP, durationMonths: 0.5, isPartOfEducation: true}),
+                new WorkExperience({company: AI_SUMMER_CAMP, durationMonths: 0.5, isPartOfEducation: true}),
             ],
         }),
         

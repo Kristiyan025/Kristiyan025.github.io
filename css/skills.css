@@ -6,7 +6,7 @@ ul.skills-list{
 }
 
 ul.skills-list > li{
-    margin-bottom: calc(.45 * var(--font-size));
+    /* margin-bottom: calc(.45 * var(--font-size)); */
 }
 
 ul.skills-list > li:last-child{
@@ -56,7 +56,7 @@ section.skill-badge::after{
 }
 
 section.skill-badge > img.skill-badge-image{
-    --curr-size: calc(var(--size) / sqrt(2));
+    --curr-size: calc(var(--size) / 1.41421);
     width: var(--curr-size);
     height: var(--curr-size);
     object-fit: contain;
@@ -74,6 +74,236 @@ h3.skill-header-text{
 }
 
 .skill-header-text > .skill-link{ 
+    text-decoration: none;
+    color: inherit;
+}
+
+.skills-list > li > .collapsible > .collapsible-content{ 
+    padding-bottom: calc(.7 * var(--font-size));
+    flex-flow: column;
+}
+
+.skill-description{
+    color: #05131f;
+    font-size: calc(.6 * var(--font-size));
+    margin-left: calc(.4 * var(--font-size));
+    width: 90%;
+}
+
+.skill-description::before{
+    content: 'Description: ';
+    color: aliceblue;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-shadow: .2em .1em .3em rgba(41, 41, 41, 0.253);
+    margin-right: calc(.2 * var(--font-size));
+}
+
+.work-exp-distribution{
+    position: relative;
+    margin-top: calc(1 * var(--font-size)) !important;
+    --size: calc(8 * var(--font-size));
+    width: max(70%, var(--size));
+    max-width: max(70%, var(--size));
+    aspect-ratio: 1 / 1;
+    align-self: center;
+}
+
+.work-exp-distribution > .coord-system{
+    --line-thickness: max(2px, calc(.05 * var(--font-size)));
+    --original-size: calc(100% - 2 * var(--line-thickness));
+    --line-color: #0a0a0a;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.work-exp-distribution > .coord-system > .circle-1{
+    --size: calc(5 / 5 * var(--original-size) - (var(--line-thickness) / 2));
+}
+
+.work-exp-distribution > .coord-system > .circle-2{
+    --size: calc(4 / 5 * var(--original-size) - (var(--line-thickness) / 2));
+}
+
+.work-exp-distribution > .coord-system > .circle-3{
+    --size: calc(3 / 5 * var(--original-size) - (var(--line-thickness) / 2));
+}
+
+.work-exp-distribution > .coord-system > .circle-4{
+    --size: calc(2 / 5 * var(--original-size) - (var(--line-thickness) / 2));
+}
+
+.work-exp-distribution > .coord-system > .circle-5{
+    --size: calc(1 / 5 * var(--original-size) - (var(--line-thickness) / 2));
+}
+
+.work-exp-distribution > .coord-system > .origin{
+    --size: calc(2 * var(--line-thickness));
+}
+
+.work-exp-distribution > .coord-system > .circle-1,
+.work-exp-distribution > .coord-system > .circle-2,
+.work-exp-distribution > .coord-system > .circle-3,
+.work-exp-distribution > .coord-system > .circle-4,
+.work-exp-distribution > .coord-system > .circle-5,
+.work-exp-distribution > .coord-system > .origin{
+    position: absolute;
+    --offset: calc((100% - var(--size)) / 2);
+    top: var(--offset);
+    right: var(--offset);
+    bottom: var(--offset);
+    left: var(--offset);
+    border: var(--line-thickness) solid var(--line-color);
+    border-radius: 50%;
+}
+
+.work-exp-distribution > .coord-system > .circle-1{
+    background-color: #fdfdfcef;
+}
+
+.work-exp-distribution > .coord-system > .origin{
+    border: none;
+    background-color: var(--line-color);
+}
+
+.work-exp-distribution > .coord-system > .coord-axis{
+    --extension: calc(6 * var(--line-thickness));
+    position: absolute;
+    width: calc(50% + var(--extension));
+    height: var(--line-thickness);
+    right: calc(-1 * var(--extension));
+    top: calc(50% - (var(--line-thickness) / 2));
+    background-color: var(--line-color);
+    border-radius: calc(var(--line-thickness) / 2);
+    transform-origin: 0 50%;
+}
+
+.work-exp-distribution > .coord-system > .coord-axis::before,
+.work-exp-distribution > .coord-system > .coord-axis::after{
+    position: absolute;
+    content: '';
+    width: var(--extension);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--line-color);
+    border-radius: calc(var(--line-thickness) / 2);
+    transform-origin: 100% 50%;
+    --angle: 45deg;
+}
+
+.work-exp-distribution > .coord-system > .coord-axis::before{
+    transform: rotate(var(--angle));
+}
+
+.work-exp-distribution > .coord-system > .coord-axis::after{
+    transform: rotate(calc(-1 * var(--angle)));
+}
+
+.work-exp-distribution > .graph{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.work-exp-distribution > .graph > .graph-line{
+    stroke:rgb(70, 33, 70);
+    stroke-width:10;
+    stroke-dasharray: 30, 10; /* Length of dashes and gaps */
+    stroke-dashoffset: 0;
+    animation: dash 2s linear infinite;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: -520;
+    }
+}
+
+.work-exp-distribution > .graph-nodes {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    --badge-size: calc(1 * var(--font-size));
+    --border-thickness: calc(.15 * var(--font-size));
+    --height: calc(var(--badge-size) + 2 * var(--border-thickness));
+    z-index: 3;
+}
+
+.work-exp-distribution > .graph-nodes > .node-container {
+    list-style-type: none;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: calc(.5 * var(--font-size));
+    height: var(--height);
+    border-radius: calc(.5 * var(--height));
+    background-color: #f1e7ffc9;
+    backdrop-filter: blur(2px); /* Applies the glass blur effect */
+    -webkit-backdrop-filter: blur(2px); /* Safari compatibility */
+    box-shadow: calc(0.05 * var(--font-size)) calc(0.05 * var(--font-size)) calc(0.1 * var(--font-size)) #36363633;
+}
+
+.work-exp-distribution > .graph-nodes > .node-container > .node-badge {
+    height: var(--height);
+    width: var(--height);
+    min-height: var(--height);
+    min-width: var(--height);
+    max-height: var(--height);
+    max-width: var(--height);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: var(--border-thickness) solid #024b18;
+    transition: transform .3s ease-in-out;
+    background-color: #f0f8ff;
+    position: relative;
+    box-shadow: inset calc(.05 * var(--badge-size)) calc(.05 * var(--badge-size)) calc(.3 * var(--badge-size)) rgba(41, 41, 41, 0.507);
+}
+
+.work-exp-distribution > .graph-nodes > .node-container:hover > .node-badge {
+    transform: scale(1.1);
+}
+
+.work-exp-distribution > .graph-nodes > .node-container > .node-badge > .node-badge-image {
+    width: calc(1.05 * var(--badge-size));
+    height: calc(1.05 * var(--badge-size));
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.work-exp-distribution > .graph-nodes > .node-container > .node-badge > .node-badge-mini-image {
+    position: absolute;
+    --size: calc(0.4 * var(--badge-size));
+    --offset: calc((.5 + .5 / 1.41421) * 1.05 * var(--badge-size) - (var(--size) / 2));
+    top: var(--offset);
+    left: var(--offset);
+    width: var(--size);
+    height: var(--size);
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.work-exp-distribution > .graph-nodes > .node-container > .node-name {
+    height: var(--badge-size);
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    color: #091c2c;
+}
+
+.work-exp-distribution > .graph-nodes > .node-container > .node-name > .node-name-link {
     text-decoration: none;
     color: inherit;
 }

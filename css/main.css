@@ -511,7 +511,7 @@ body{
 }
 
 .collapsible{
-    margin-bottom: calc(.45 * var(--font-size));
+    /* margin-bottom: calc(.45 * var(--font-size)); */
     position: relative;
 }
 
@@ -520,9 +520,9 @@ body{
 }
 
 .collapsible > .collapsible-header{
-    color: rgb(1, 61, 110);
+    color: #013d6e;
     font-family: 'Poppins', sans-serif;
-    text-shadow: .2em .1em .3em rgba(41, 41, 41, 0.253);
+    text-shadow: .2em .1em .3em #29292941;
     font-size: calc(1 * var(--font-size));
     background-color: rgb(234 243 248);
     cursor: pointer;
