@@ -714,3 +714,7 @@ body{
 .tab-container .tab-content-container .tab-content.active {
     display: block; /* Shows the active tab */
 }
+
+.title.fix-new-title {
+    filter: drop-shadow(calc(.04 * var(--font-size)) calc(.04 * var(--font-size)) calc(.03 * var(--font-size)) rgba(0, 0, 0, 0.904))
+}
