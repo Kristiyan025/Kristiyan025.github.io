@@ -1,5 +1,5 @@
 let achievements = {
-  'math' : [
+  math: [
     `2015-03-30_International Math Tournament 'European Kangaroo'.jpg`,
     `2014-03-22_International Math Tournament 'European Kangaroo'.jpg`,
     `2021-03-28_International Math Tournament 'European Kangaroo'.jpg`,
@@ -35,10 +35,13 @@ let achievements = {
     `2022-10-29_9-th National Student Olympiad in Computer Mathematics.jpg`,
     `2023-03-07_17-th South-Eastern European Mathematical Olympiad for University Students.jpg`,
     `2024-03-03_16-th Open Mathematical Olympiad for University Students (OMOUS).jpg`,
-    `2024-05-17_51-st National Student Olympiad in Mathematics-PART-1.jpg`,
-    `2024-05-17_51-st National Student Olympiad in Mathematics-PART-2.jpg`,
+    `2024-05-17_49-th National Student Olympiad in Mathematics-PART-1.jpg`,
+    `2024-05-17_49-th National Student Olympiad in Mathematics-PART-2.jpg`,
+    `2024-11-09_11-th National Student Olympiad in Computer Mathematics.jpeg`,
+    `2024-12-14_Inter-university competition in Mathematics.jpeg`,
+    `2025-05-17_50-th National Student Olympiad in Mathematics.jpeg`,
   ],
-  'music' : [
+  music: [
     `2016-04-01_7-th National Folklore Competition 'Pesenna Duga nad Kutev'-PART-1.jpg`,
     `2016-04-01_7-th National Folklore Competition 'Pesenna Duga nad Kutev'-PART-2.jpg`,
     `2015-03-28_5-th Competition 'Zvezdi v Radioto'-PART-1.jpg`,
@@ -81,7 +84,7 @@ let achievements = {
     `2021-07-16_National Music and Art Competition 'Orfeevi Talanti'.jpg`,
     `2020-07-03_1-st Online Folklore Competition 'Bulgarin'.jpg`,
   ],
-  'miscellaneous' : [
+  miscellaneous: [
     `2014-03-01_Competition 'Fantaziya'.jpg`,
     `2014-11-29_Bowling 'Korona'.jpg`,
     `2015-02-26_Recital 'Za da ya ima Bulgaria'.jpg`,
@@ -96,7 +99,7 @@ let achievements = {
     `2019-04-12_Patron Saint's Day 'Zemyata - nash obsht dom'.jpg`,
     `2012-10-27_Reading Contest 'Biizus, Ramona and Henry'.jpg`,
   ],
-  'programming' : [
+  programming: [
     `2021-05-15_Softuniada.jpg`,
     `2013-04-20_6-th Regional Competition in IT.jpg`,
     `2013-04-20_5-th Regional Competition in IT.jpg`,
@@ -109,32 +112,31 @@ let achievements = {
     `2018-11-11_Informatics Contest 'Bobur'.jpg`,
     `2021-03-13_National Olympiad in Informatics (NOI).jpg`,
     `2024-03-23_6-th SU FMI Algorithmi Clash.jpg`,
+    `2025-03-16_SU FMI Codes Hackathon - Wiser Technology Prize.jpg`,
   ],
-  'german' : [
+  german: [
     `2018-01-17_Nationalwettbewerb Klett in Deutsch als Fremdsprache - Runde 1.jpg`,
     `2021-04-29_Nationalwettbewerb Klett in Deutsch als Fremdsprache - Runde 1.jpg`,
   ],
-  'english' : [
+  english: [
     `2016-02-29_National Spelling Bee.jpg`,
     `2013-02-09_National Spelling Bee.jpg`,
     `2015-03-06_National Spelling Bee.jpg`,
   ],
-  'technical-sketching' : [
+  "technical-sketching": [
     `2017-04-24_National Olympiad in Technical Sketching - Finals.jpg`,
     `2018-04-22_National Olympiad in Technical Sketching - Finals.jpg`,
     `2020-06-28_National Olympiad in Technical Sketching - Finals.jpg`,
   ],
-  'math-linguistics' : [
+  "math-linguistics": [
     `2021-01-23_National Competition in Linguistics.jpg`,
     `2020-01-24_National Competition in Math Linguistics.jpg`,
   ],
-  'robotics' : [
-    `2020-11-10_BAN's Session.jpg`,
-  ]
+  robotics: [`2020-11-10_BAN's Session.jpg`],
 };
 
 let education = {
-  'programming' : [
+  programming: [
     `2021-06-05_Course 'Artificial Intelligence (AI)'.jpg`,
     `2018-06-28_Course 'Analysis, Cleaning and Repairing of Computer Systems'.jpg`,
     `2016-09-23_Online Course 'The Hour of Code'.jpg`,
@@ -172,10 +174,10 @@ let education = {
     `2022-05-12_IT Kariera.jpg`,
     `2022-06-17_Online Course 'Optimize Tensorflow Models for Deployment with TensorRT' from Coursera.jpg`,
   ],
-  'miscellaneous' : [
+  miscellaneous: [
     `2012-03-29_Level 'A' within The ULEN Ski and Snowboard School.jpg`,
   ],
-  'school' : [
+  school: [
     `2010-05-20_Certificate for Finished Kindergarten.jpg`,
     `2011-05-24_Certificate for Finished 1-st Grade.jpg`,
     `2012-05-25_Diploma for Active Participation in Extracurricular Activities.jpg`,
@@ -189,9 +191,9 @@ let education = {
     `2018-05-15_Diploma for High AchievemeMathematician of 8-th Grade.jpg`,
     `2017-05-17_Diploma for High Achievements in School.jpg`,
     `2022-05-25_Highschool Diploma-PART-1.jpg`,
-    `2022-05-25_Highschool Diploma-PART-2.jpg`
+    `2022-05-25_Highschool Diploma-PART-2.jpg`,
   ],
-  'english' : [
+  english: [
     `2021-10-29_TOEFL Certificate-PART-1.jpg`,
     `2021-10-29_TOEFL Certificate-PART-2.jpg`,
     `2021-10-02_SAT Score Report-PART-1.jpg`,
@@ -202,6 +204,5 @@ let education = {
     `2020-01-26_Intermediate Level 2 (B1 - B2) within American University in Bulgaria (AUBG).jpg`,
     `2021-01-27_Upper-Intermediate Level 2 (B2.2) within American University in Bulgaria (AUBG).jpg`,
     `2021-05-21_Advanced Level (C1) within American University in Bulgaria (AUBG).jpg`,
-  ]
+  ],
 };
-
