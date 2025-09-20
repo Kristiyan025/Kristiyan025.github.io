@@ -173,6 +173,7 @@ let education = {
     `2022-04-07_Online Course 'Custom and Distributed Training with Tensorflow' from Coursera.jpg`,
     `2022-05-12_IT Kariera.jpg`,
     `2022-06-17_Online Course 'Optimize Tensorflow Models for Deployment with TensorRT' from Coursera.jpg`,
+    `2025-08-01_PSI Summer School for ML - Petnica, Serbia.jpg`,
   ],
   miscellaneous: [
     `2012-03-29_Level 'A' within The ULEN Ski and Snowboard School.jpg`,
