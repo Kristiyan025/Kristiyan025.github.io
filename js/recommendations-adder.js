@@ -1,6 +1,5 @@
 function addRecommendation(el, recommendations) {
   for (const recommendation of recommendations) {
-    console.log(recommendation);
     let childElement = document.createElement("li");
     childElement.classList.add("list-item", "event-info", "reveal");
     childElement.innerHTML = `
