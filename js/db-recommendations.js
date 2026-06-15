@@ -14,6 +14,11 @@ const school_recommendations = [
     title: "Asen Bozhilov's Recommendation",
   },
   {
+    name: "Assoc. Prof. Paravan Parvanov - Vice Rector at university",
+    filename: "Paravan Parvanov.pdf",
+    title: "Paravan Parvanov's Recommendation",
+  },
+  {
     name: "Assoc. Prof. Minko Markov - Teacher at university",
     filename: "Minko Markov2.pdf",
     title: "Minko Markov's Recommendation",
