@@ -40,6 +40,8 @@ let achievements = {
     `2024-11-09_11-th National Student Olympiad in Computer Mathematics.jpeg`,
     `2024-12-14_Inter-university competition in Mathematics.jpeg`,
     `2025-05-17_50-th National Student Olympiad in Mathematics.jpeg`,
+    `2026-05-17_51-th National Student Olympiad in Mathematics-PART-1.jpg`,
+    `2026-05-17_51-th National Student Olympiad in Mathematics-PART-2.jpg`,
   ],
   music: [
     `2016-04-01_7-th National Folklore Competition 'Pesenna Duga nad Kutev'-PART-1.jpg`,

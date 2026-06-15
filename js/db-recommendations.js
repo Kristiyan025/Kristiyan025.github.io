@@ -10,6 +10,21 @@ const work_recommendations = [
 const school_recommendations = [
   {
     name: "Assoc. Prof. Asen Bozhilov - Vice Dean at university",
+    filename: "Asen Bozhilov2.pdf",
+    title: "Asen Bozhilov's Recommendation",
+  },
+  {
+    name: "Assoc. Prof. Minko Markov - Teacher at university",
+    filename: "Minko Markov2.pdf",
+    title: "Minko Markov's Recommendation",
+  },
+  {
+    name: "DSci., Full Prof. Nadezhda Ribarska - Teacher at university",
+    filename: "Nadezhda Ribarska.pdf",
+    title: "Nadezhda Ribarska's Recommendation",
+  },
+  {
+    name: "Assoc. Prof. Asen Bozhilov - Vice Dean at university",
     filename: "Asen Bozhilov.pdf",
     title: "Asen Bozhilov's Recommendation",
   },
