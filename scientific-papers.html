@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills</title>
+    <title>Scientific Papers</title>
     <link rel="SHORTCUT ICON" href="./images/main/logo.ico" type="image/x-icon" />
     <link rel="ICON" href="./images/main/logo.ico" type="image/ico" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/skills.css">
-    <script src="./js/main.js" defer></script>
+    <link rel="stylesheet" href="./css/timeline.css">
+    <link rel="stylesheet" href="./css/education.css">
+    <link rel="stylesheet" href="./css/recommendations.css">
     <script src="https://kit.fontawesome.com/26ff0a2b49.js" crossorigin="anonymous"></script>
-    <script src="./js/db-skills.js"></script>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/fix-pdf-zoom-on-resize.js"></script>
 </head>
 <body>
     <header class="content-container header">
@@ -44,18 +46,14 @@
     </header>
     <section class="body">
         <section class="content-container">
-            <img class="title unselectable fix-new-title" src="./images/main/skills.png" alt="Skills" unselectable="on">
-            <ul class="skills">
-                <script src="./js/gradient.js"></script>
-                <script src="./js/skills-adder.js"></script>
-                <script type="text/javascript">
-                    new SkillAdder().addSkills(document.currentScript.parentNode);
-                </script>
-            </ul>
+            <img class="title unselectable" src="./images/main/scientific_papers.png" alt="Scientific Papers" unselectable="on">
+
+            <ul class="list" id="papers"></ul>
         </section>
     </section>
+    <script src="./js/db-papers.js"></script>
+    <script src="./js/papers-adder.js"></script>
     <script src="./js/empty-page-message-adder.js"></script>
-    <script src="./js/fix-tooltips-location.js"></script>
     <footer class="content-container footer unselectable" unselectable="on">
         <ul class="footer-content">
             <li class="column">
@@ -135,5 +133,8 @@
             &copy; 2022 - <img class="signature" src="images/main/initials_break-it-down_shadow.png" alt="K.I.G.">
         </p>
     </footer>
+    <script type="text/javascript">
+        fixPdfElementZoomOnResize("embed.pdf");
+    </script>
 </body>
 </html>
